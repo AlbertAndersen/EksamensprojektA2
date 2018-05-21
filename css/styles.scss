@@ -1,0 +1,202 @@
+
+//kode opdeling kommentar
+
+/*========================================================================
+ ==============================Side====================================
+=========================================================================*/
+
+/*-------------------------------------------------------------------------
+----------------------------------Sektion-----------------------
+---------------------------------------------------------------------------*/
+
+/*================Underdel================*/
+
+
+
+
+
+//her er alle de ting der ikke passer andre steder.
+/*========================================================================
+ ==============================Generelt====================================
+=========================================================================*/
+/*  Hvis vi skal have en costume font
+@font-face { //Definere fonten odin, så vi kan bruge den
+  font-family: odin;
+  font-weight: 100;
+  src: url('odin.otf');
+}
+*/
+
+body {
+  margin: 0; // Ingen kanter i siden af browser
+  font-family: ;
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+h1, h2, h4, h5, h6 {
+  margin: 0; // Ingen ydre margen fra overskrifter
+  padding: 30px;
+  letter-spacing: 5px; //samme som tracking i PS
+  text-transform: uppercase; //gør at alle overskrifter er UPPERCASE
+}
+
+p {
+  margin: 0; // Ingen ydre margen fra paragraffer
+  padding: 0px; // Ingen indre margen fra paragraffer
+}
+
+// Sikrer billeder er responsive
+img {
+  display: block; // Billeder er et element (laver linjeskift)
+  max-width: 100%; // Bredde mÂ maks fylde 100%
+  height: auto; // H¯jden skal tilpasse sig
+}
+
+
+//Farve variabler
+$color-red: #750002;
+
+//andre variabler
+$sektion-hojde: 500; //det her er standard højden på sektioner i px
+
+
+//12 column grid
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+
+//knap
+.ghost-button {
+  color: #ffffff;
+  text-align: center;
+  border: 2px solid #ffffff;
+  font-size: 14px;
+  padding: 7px 2px;
+  font-weight: normal;
+  margin: 2px 0;
+  margin-right: 12px;
+  display: inline-block;
+  text-decoration: none;
+  min-width: 120px;
+}
+
+.ghost-button:hover, .ghost-button:active {
+  color: $color-red;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+
+/*================knappen================*/
+
+
+/*-------------------------------------------------------------------------
+----------------------------------Header, footer & Landing----------------------
+---------------------------------------------------------------------------*/
+
+/*================HEADER===============*/
+
+.header { //farve og længde på header sektionen
+
+  height: 100px; // Højden på headeren. Hvis denne ændres skal .logo { top } også ændres
+  background-image: url("../images/logo.png"); // her skal der være et billede
+  background-size: cover; //fylder headeren ud
+  grid-column: 2/7;
+  min-width: 100px;
+  max-width: 100px;
+}
+
+
+
+
+/*========================================================================
+ ==============================forside====================================
+=========================================================================*/
+
+
+
+/*================Responsivitet===============*/
+
+
+
+
+
+
+/*================BURGER MENU===============*/
+// den ligger i bunden fordi den fylder meget, og ikke skal ændres på :)
+
+.hamburger{
+  z-index: 2;
+  position: fixed;
+  top: 20px;
+  right: 45px;
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(117, 0, 02, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #f6f7fd;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+  letter-spacing: 5px;
+  font-weight: 100;
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+
+}
+
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px){
+  .overlay a {
+    font-size: 20px
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+
