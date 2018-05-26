@@ -19,20 +19,14 @@
 /*========================================================================
  ==============================Generelt====================================
 =========================================================================*/
-/*  Hvis vi skal have en costume font
-@font-face { //Definere fonten odin, så vi kan bruge den
-  font-family: odin;
-  font-weight: 100;
-  src: url('odin.otf');
-}
-*/
 
 body {
   margin: 0; // Ingen kanter i siden af browser
-  font-family: ;
-  color: white;
-  font-size: 16px;
+  color: white; // skrift farve
+  font-family: 'Raleway', sans-serif; //font
+  font-size: 16px; //normal tekst størrelse
   font-weight: normal;
+  background-color: #212121;
 }
 
 h1, h2, h4, h5, h6 {
@@ -41,6 +35,11 @@ h1, h2, h4, h5, h6 {
   letter-spacing: 5px; //samme som tracking i PS
   text-transform: uppercase; //gør at alle overskrifter er UPPERCASE
 }
+
+h1{
+  text-align: center; //centrere teksten i header
+}
+
 
 p {
   margin: 0; // Ingen ydre margen fra paragraffer
@@ -55,11 +54,13 @@ img {
 }
 
 
-//Farve variabler
-$color-red: #750002;
 
-//andre variabler
-$sektion-hojde: 500; //det her er standard højden på sektioner i px
+
+//Farve variabler
+$color-blaa: #0097d7; //den blå farve
+$color-graa: #333333; //den Grå farve
+$color-orange: #f37121; //den orange farve
+
 
 
 //12 column grid
@@ -86,32 +87,109 @@ $sektion-hojde: 500; //det her er standard højden på sektioner i px
 }
 
 .ghost-button:hover, .ghost-button:active {
-  color: $color-red;
+  color: $color-blaa;
   background: #ffffff;
   cursor: pointer;
 }
 
-
-/*================knappen================*/
-
-
-/*-------------------------------------------------------------------------
-----------------------------------Header, footer & Landing----------------------
----------------------------------------------------------------------------*/
-
-/*================HEADER===============*/
-
-.header { //farve og længde på header sektionen
-
-  height: 100px; // Højden på headeren. Hvis denne ændres skal .logo { top } også ændres
-  background-image: url("../images/logo.png"); // her skal der være et billede
-  background-size: cover; //fylder headeren ud
-  grid-column: 2/7;
+//logo
+.logo {
+  background-image: url("../Images/logo-2.png"); //logo billedet
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat ;
   min-width: 100px;
-  max-width: 100px;
+}
+
+/*========================================================================
+ ==============================Header, footer & Landing==========
+=========================================================================*/
+
+/*================NAV===============*/
+
+.nav { //farve og længde på navbar sektionen
+
+  height: 100px;
+  background-color: $color-blaa;
 }
 
 
+.logo.nav { //placering af logo
+  grid-column: 2/3;
+}
+
+
+
+.menu { //Navn menu
+  display: none; //vises ikke som standart
+  grid-column: 5/13;
+  margin: auto 0 auto auto; //centrere A tags
+
+}
+
+.menu a {
+  align-content: center;
+  text-decoration: none; //fjerner understregning
+  padding: 0 40px; //mellemrummet mellemn em
+  font-size: 20px;
+  color: #f6f7fd;
+}
+
+
+
+/*================HEADER===============*/
+
+header{ //højde
+  min-height: 500px;
+  max-height: 70vh;
+  align-items: center;
+  background-size: cover; //gør at baggrundsbilledet fylder det hele
+  background-position: center center; //centrere baggrundsbilledet
+}
+
+header h1{
+  grid-column: 1/13;
+}
+
+
+/*================FOOTER===============*/
+footer {
+  justify-items: center;
+  background-color: $color-graa;
+  padding: 50px 0px; //giver lidt white space i toppen og bunden af footer
+}
+
+.logo.foot { //placering og størrelse på logo i footer
+  grid-column: 6/8;
+  min-width: 200px;
+  min-height: 150px;
+}
+
+.SoMe { //placering af some ikoner
+  grid-row: 4/5;
+  grid-column: 1/13;
+  display: flex;
+  padding: 40px;
+}
+
+.SoMe_icon { //farve og mellemrum på some ikoner
+  padding: 0 20px;
+  color: $color-orange;
+
+}
+
+.sider { //placering af undersider i footer
+  padding: 30px 0px;
+  grid-row: 2/3;
+  grid-column: 1/13;
+  text-align: center;
+}
+
+.kontakt { //placering af kontakt information
+  grid-row: 3/4;
+  grid-column: 1/13;
+  text-align: center;
+}
 
 
 /*========================================================================
@@ -119,11 +197,118 @@ $sektion-hojde: 500; //det her er standard højden på sektioner i px
 =========================================================================*/
 
 
+/*================HEADER===============*/
 
-/*================Responsivitet===============*/
+header.forside { //Header billede på forsiden
+  background-image: url("../Images/headerTest.png");
+
+}
+
+/*================BLOB===============*/
+
+.blob {
+  background-color: #f6f7fd;
+  min-height: 500px;
+}
+
+/*
+                                               .--.
+                                               `.  \
+                                                 \  \
+                                                  .  \
+                                                  :   .
+                                                  |    .
+                                                  |    :
+                                                  |    |
+  ..._  ___                                       |    |
+ `."".`''''""--..___                              |    |
+ ,-\  \             ""-...__         _____________/    |
+ / ` " '                    `""""""""                  .
+ \                                                      L
+ (>                                                      \
+/                                                         \
+\_    ___..---.                                            L
+  `--'         '.                                           \
+                 .                                           \_
+                _/`.                                           `.._
+             .'     -.                                             `.
+            /     __.-Y     /''''''-...___,...--------.._            |
+           /   _."    |    /                ' .      \   '---..._    |
+          /   /      /    /                _,. '    ,/           |   |
+          \_,'     _.'   /              /''     _,-'            _|   |
+                  '     /               `-----''               /     |
+                  `...-'                                       `...-'
+*/
+
+/********************************************************************************
+ ****************************Responsivt-Tablet**********************************
+*********************************************************************************/
+
+@media screen and (min-width: 750px) {
+
+  /*========================================================================
+   ==============================Header, footer & Landing===================
+  =========================================================================*/
+
+  /*================Footer===============*/
+  .sider { //gør at undersideren står ved siden af hinanden i footer
+    display: flex;
+  }
+
+  h3 { //giver undersideren lidt plads
+    padding: 0 20px;
+  }
+
+  /*========================================================================
+   ==============================Forside============================================
+   =========================================================================*/
+
+
+}
+
+/********************************************************************************
+ ****************************Responsivt-Computer**********************************
+*********************************************************************************/
+
+@media screen and (min-width: 1200px) {
+
+  /*========================================================================
+   ==============================Header, footer & Landing===========================
+   =========================================================================*/
+
+  /*================HEADER===============*/
+
+
+  .hamburger {//fjerner burgermenu
+    display: none;
+  }
+
+  .menu {//viser normale menu
+    display: block;
+  }
+
+  /*========================================================================
+   ==============================Forside============================================
+   =========================================================================*/
+
+
+}
 
 
 
+
+
+
+
+
+/*
+
+/'.'.'.\
+&%$&%$&r
+(#####u)
+\,,,,,,/
+
+*/
 
 
 
@@ -147,7 +332,7 @@ $sektion-hojde: 500; //det her er standard højden på sektioner i px
   left: 0;
   top: 0;
   background-color: rgb(0,0,0); /* Black fallback color */
-  background-color: rgba(117, 0, 02, 0.9); /* Black w/opacity */
+  background-color: rgba(0, 151, 215, 0.9); /* Black w/opacity */
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }

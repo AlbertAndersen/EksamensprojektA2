@@ -29,13 +29,16 @@
     <meta property="og:title" content="JCI Slagelse">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://www.cilsoee.dk">
-    <meta property="og:image" content="http://www.cilsoee.dk/images/Muscat-flaske.jpg">
+    <meta property="og:image" content="">
     <meta property="og:description" content="Here at JCI Slagelse">
     <meta property="og:locale" content="da_DK">
 
     <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
     <link rel="stylesheet" href="css/hamburgers.css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+    <!-- google fonts, font awesome, javascript -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <script src="https://use.fontawesome.com/75970a48c3.js"></script>
     <script src="javascript/script.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
@@ -62,63 +65,137 @@
     <nav class="overlay-content">
 
         <!-- onclick lukker overlay. #top går til a tag med navn top. class smoothscroll aktivere smoothscroll -->
-        <a href="#top" class="smoothScroll" onclick="closeNav()">HOME</a>
-        <a href="undersider/wine.html">THE WINE</a>
-
-
-        <!-- onclick lukker overlay. #footer går til a tag med navn footer. class smoothscroll aktivere smoothscroll -->
+        <a href="#top" class="smoothScroll" onclick="closeNav()">Forside</a>
+        <a href="undersider/">Om os</a>
+        <a href="undersider/">Medlemskab</a>
+        <a href="undersider/">Events</a>
+        <a href="undersider/">Kontkat</a>
 
     </nav>
 </div>
 
-<!--- landing------>
-<header class="grid landing">
-
-    <!--- HEADER ------->
-    <div class="header forside">
 
 
+<!--- NAV ------->
+<nav class="nav forside grid">
 
-        <a name="top"></a>
+    <!-- A tag så man kan komme til top med smoothscroll-->
+    <a name="top"></a>
 
-        <!-- Det her er knappen der åbner og lukker menuen. -->
-        <button class="hamburger hamburger--spring" type="button" >
+    <!-- Det her er knappen der åbner og lukker menuen. -->
+    <button class="hamburger hamburger--spring" type="button" >
 
-            <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-            </span>
+        <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+        </span>
 
-        </button>
+    </button>
 
-        <!-- her er javascript der åbner og lukker menuen -->
-        <script>
-            // leder efter noget med klassen .hamburger
-            var hamburger = document.querySelector(".hamburger");
+    <!-- her er javascript der åbner og lukker menuen -->
+    <script>
+        // leder efter noget med klassen .hamburger
+        var hamburger = document.querySelector(".hamburger");
 
-            // gør at der sker noget når man klikker på .hamburger
-            hamburger.addEventListener("click", function() {
+        // gør at der sker noget når man klikker på .hamburger
+        hamburger.addEventListener("click", function() {
 
-                //her er et if else statement
+            //her er et if else statement
 
-                //hvis .hamburger har klassen is-active sættes værdien på overlay width til 0%
-                if (hamburger.classList.contains("is-active")) {
-                    document.getElementById("myNav").style.width = "0%";
-                    //ellers sættes værdien til 100%
-                } else {
-                    document.getElementById("myNav").style.width = "100%";
-                }
-                //skifter mellem at knappen med .hamburger har klassen "is-active"
-                hamburger.classList.toggle("is-active");
-            });
-        </script>
+            //hvis .hamburger har klassen is-active sættes værdien på overlay width til 0%
+            if (hamburger.classList.contains("is-active")) {
+                document.getElementById("myNav").style.width = "0%";
+                //ellers sættes værdien til 100%
+            } else {
+                document.getElementById("myNav").style.width = "100%";
+            }
+            //skifter mellem at knappen med .hamburger har klassen "is-active"
+            hamburger.classList.toggle("is-active");
+        });
+    </script>
+
+    <!-- Her ligger logo  -->
+    <div class="logo navigation"></div>
+
+    <!-- Den menu der vises på computer -->
+    <div class="menu">
+        
+        <a href="#top" class="smoothScroll" onclick="closeNav()">Forside</a>
+        <a href="undersider/">Om os</a>
+        <a href="undersider/">Medlemskab</a>
+        <a href="undersider/">Events</a>
+        <a href="undersider/">Kontakt</a>
 
     </div>
+
+
+</nav>
+
+
+
+
+
+<!--- Header ------->
+
+<header class="grid forside">
+
+    <!-- Overskriften i header -->
+    <h1>Overskrift</h1>
 
 </header>
 
 
 
 
+
+
+<!--- BLOBS ------->
+
+<section class="blob grid">
+
+    <div>HEJ</div>
+
+</section>
+
+
+
+
+
+
+<!--- FOOTER ------->
+
+<footer class="grid">
+    <!--  Logoet-->
+    <div class="logo foot"> </div>
+
+    <!-- SoMe ikoner -->
+    <div class="SoMe">
+
+        <div class="SoMe_icon"> <i class="fab fa-facebook-square fa-3x"></i> </div>
+        <div class="SoMe_icon"> <i class="fab fa-instagram fa-3x"></i> </div>
+
+    </div>
+
+    <!-- undersider -->
+    <div class="sider">
+
+        <h3>Forside</h3>
+        <h3>Om os</h3>
+        <h3>Events</h3>
+        <h3>Medlemskab</h3>
+        <h3>Kontakt</h3>
+
+    </div>
+
+    <!-- Kontaktinformation -->
+    <div class="kontakt">
+
+        <h2>Konktat</h2>
+        <h3>Eller@mail.dk</h3>
+        <h3>30 30 30 30</h3>
+
+    </div>
+
+</footer>
 
 </body>
 </html>
