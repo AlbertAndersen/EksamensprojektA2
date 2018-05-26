@@ -1,6 +1,7 @@
 <!-- Fortæller det er html5 -->
+
 <!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
-<html lang="da">
+<html lang="en">
 
 <!-- I <head> har man opsætning - alt det som man ikke ser som selve indholdet -->
 <head>
@@ -9,29 +10,47 @@
     <meta charset="utf-8">
 
     <!-- Titel som ses oppe i browserens tab mv. -->
-    <title>404</title>
+    <title>JCI Slagelse</title>
 
     <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
     <meta name="copyright" content="Information om copyright">
 
+    <!-- Titel som ses oppe i browserens tab mv. -->
+    <title>Contact JCI Slagelse</title>
+
+    <meta name="description" content="JCI Slagelse ">
+
+    <meta name="keywords" content="">
+
+
+    <!-- fortæller hvilket billede, titel og beskrivelse der skal vises ved deling på fx facebook)-->
+    <meta property="og:title" content="JCI Slagelse">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.cilsoee.dk">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="Here at JCI Slagelse">
+    <meta property="og:locale" content="da_DK">
+
     <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
     <link rel="stylesheet" href="../css/hamburgers.css">
     <link href="../css/styles.css" rel="stylesheet" type="text/css">
+
+    <!-- google fonts, font awesome, javascript -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <script src="https://use.fontawesome.com/75970a48c3.js"></script>
     <script src="../javascript/script.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--Linker til jquery -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <!--Linker til smoothscroll fil-->
     <script type="text/javascript" src="../javascript/smoothscroll.js"></script>
 
-
-
-    <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 
@@ -46,59 +65,123 @@
     <nav class="overlay-content">
 
         <!-- onclick lukker overlay. #top går til a tag med navn top. class smoothscroll aktivere smoothscroll -->
-        <a href="../index.html">HOME</a>
-        <a href="wine.html">THE WINE</a>
-        <a href="TheVinyard.html">THE VINEYARD</a>
-        <a href="slide.HTML">GALLERY</a>
-        <a href="kontakt.html">CONTACT</a>
-        <!-- onclick lukker overlay. #footer går til a tag med navn footer. class smoothscroll aktivere smoothscroll -->
+        <a href="#top" class="smoothScroll" onclick="closeNav()">Forside</a>
+        <a href="undersider/omOs.html">Om os</a>
+        <a href="undersider/">Medlemskab</a>
+        <a href="undersider/">Events</a>
+        <a href="undersider/">Kontkat</a>
 
     </nav>
 </div>
 
-<!--- landing------>
-<header class="grid landing">
-    <h1><span class="red">404</span> - Site not Found</h1>
-
-    <!--- HEADER ------->
-    <div class="nav forside">
 
 
+<!--- NAV ------->
+<nav class="nav forside grid">
 
-        <a name="top"></a>
+    <!-- A tag så man kan komme til top med smoothscroll-->
+    <a name="top"></a>
 
-        <!-- Det her er knappen der åbner og lukker menuen. -->
-        <button class="hamburger hamburger--spring" type="button" >
+    <!-- Det her er knappen der åbner og lukker menuen. -->
+    <button class="hamburger hamburger--spring" type="button" >
 
-            <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-            </span>
+        <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+        </span>
 
-        </button>
+    </button>
 
-        <!-- her er javascript der åbner og lukker menuen -->
-        <script>
-            // leder efter noget med klassen .hamburger
-            var hamburger = document.querySelector(".hamburger");
+    <!-- her er javascript der åbner og lukker menuen -->
+    <script>
+        // leder efter noget med klassen .hamburger
+        var hamburger = document.querySelector(".hamburger");
 
-            // gør at der sker noget når man klikker på .hamburger
-            hamburger.addEventListener("click", function() {
+        // gør at der sker noget når man klikker på .hamburger
+        hamburger.addEventListener("click", function() {
 
-                //her er et if else statement
+            //her er et if else statement
 
-                //hvis .hamburger har klassen is-active sættes værdien på overlay width til 0%
-                if (hamburger.classList.contains("is-active")) {
-                    document.getElementById("myNav").style.width = "0%";
-                    //ellers sættes værdien til 100%
-                } else {
-                    document.getElementById("myNav").style.width = "100%";
-                }
-                //skifter mellem at knappen med .hamburger har klassen "is-active"
-                hamburger.classList.toggle("is-active");
-            });
-        </script>
+            //hvis .hamburger har klassen is-active sættes værdien på overlay width til 0%
+            if (hamburger.classList.contains("is-active")) {
+                document.getElementById("myNav").style.width = "0%";
+                //ellers sættes værdien til 100%
+            } else {
+                document.getElementById("myNav").style.width = "100%";
+            }
+            //skifter mellem at knappen med .hamburger har klassen "is-active"
+            hamburger.classList.toggle("is-active");
+        });
+    </script>
+
+    <!-- Her ligger logo  -->
+    <div class="logo navigation"></div>
+
+    <!-- Den menu der vises på computer -->
+    <div class="menu">
+
+        <a href="../index.html">Forside</a>
+        <a href="../undersider/omOs.html">Om os</a>
+        <a href="../undersider/medlemskab.html">Medlemskab</a>
+        <a href="../undersider/events.html">Events</a>
+        <a href="../undersider/kontakt.html">Kontakt</a>
 
     </div>
 
+
+</nav>
+
+
+
+
+
+<!--- Header ------->
+
+<header class="grid fejl">
+
+    <!-- Overskriften i header -->
+    <h1>FEJL 404</h1>
+
 </header>
 
+
+
+
+
+<!--- FOOTER ------->
+
+<footer class="grid">
+    <!--  Logoet-->
+    <div class="logo foot"> </div>
+
+    <!-- SoMe ikoner -->
+    <div class="SoMe">
+
+        <div class="SoMe_icon"> <i class="fab fa-facebook-square fa-3x"></i> </div>
+        <div class="SoMe_icon"> <i class="fab fa-instagram fa-3x"></i> </div>
+
+    </div>
+
+    <!-- undersider -->
+    <div class="sider">
+
+        <h3>Forside</h3>
+        <h3>Om os</h3>
+        <h3>Events</h3>
+        <h3>Medlemskab</h3>
+        <h3>Kontakt</h3>
+
+    </div>
+
+    <!-- Kontaktinformation -->
+    <div class="kontakt">
+
+        <h2>Konktat</h2>
+        <h3>Eller@mail.dk</h3>
+        <h3>30 30 30 30</h3>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
