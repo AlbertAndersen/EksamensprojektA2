@@ -88,6 +88,8 @@ img {
 $color-blaa: #0097d7; //den blå farve
 $color-graa: #333333; //den Grå farve
 $color-orange: #f37121; //den orange farve
+@mixin Raleway {font-family: Raleway "Fira Code Medium"}
+@mixin Roboto {font-family: Roboto Condensed Regular}
 
 
 
@@ -334,11 +336,22 @@ header.medlemskab { //Header billede på medlemskab
 /*================HEADER===============*/
 
 header.events { //Header billede på events
-  background-image: url("../Images/3.png");
+  background-image: url("../Images/event.jpg");
 
 }
 
 /*================Kalender===============*/
+.kalenderOverskrift{
+
+  color: $color-orange;
+  font-size: 20px;
+}
+
+.tekstkalender{
+  text-align: center;
+  font-size: 12px;
+
+}
 
 /*================events===============*/
 
