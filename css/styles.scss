@@ -86,7 +86,8 @@ img {
 
 //Farve variabler
 $color-blaa: #0097d7; //den blå farve
-$color-graa: #333333; //den Grå farve
+$color-mgraa: #636363; //den mørke Grå farve
+$color-lgraa: #b7b7b7; //den lysegrå farve
 $color-orange: #f37121; //den orange farve
 
 
@@ -100,15 +101,14 @@ $color-orange: #f37121; //den orange farve
 
 
 //knap
-.ghost-button {
+.ghost-button, {
   color: #ffffff;
   text-align: center;
   border: 2px solid #ffffff;
   font-size: 14px;
   padding: 7px 2px;
   font-weight: normal;
-  margin: 2px 0;
-  margin-right: 12px;
+  margin: 10px;
   display: inline-block;
   text-decoration: none;
   min-width: 120px;
@@ -183,7 +183,7 @@ header h1{
 /*================FOOTER===============*/
 footer {
   justify-items: center;
-  background-color: $color-graa;
+  background-color: $color-mgraa;
   padding: 50px 0px; //giver lidt white space i toppen og bunden af footer
 }
 
@@ -235,7 +235,7 @@ header.forside { //Header billede på forsiden
 /*================BLOB===============*/
 
 .blobs {
-  background-color: #505050;
+  background-color: $color-lgraa;
   min-height: 500px;
 }
 
@@ -266,7 +266,7 @@ header.forside { //Header billede på forsiden
 }
 /*================står for===============*/
 .staFor {
-  background-color: $color-graa;
+  background-color: $color-mgraa;
 }
 
 .staFor *{
@@ -320,9 +320,37 @@ header.medlemskab { //Header billede på medlemskab
 
 /*================Hvad er medlemskab===============*/
 
+.medlemskabtxt, .tilmeld, .priser{
+  background-color: $color-lgraa;
+}
+
+.nummer{
+  background-color: $color-mgraa;
+}
+
+.medlemskabtxt *, .tilmeld *, .priser *, .nummer *{
+  grid-column: 2/11;
+  padding: 20px;
+}
+
+.medlemsbillede, .tilmeldbillede{
+  display: none;
+}
+
+.memberinput{
+  color: #ffffff;
+  background-color: $color-lgraa;
+  border: 2px solid #ffffff;
+  font-size: 14px;
+  padding: 7px 2px;
+  margin: 10px;
+  width: 120px;
+}
+
 /*================Hvordan tilmelder man sig===============*/
 
 /*================priser===============*/
+
 
 /*================Skriv nummer eller mail===============*/
 
