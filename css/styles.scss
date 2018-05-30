@@ -435,9 +435,100 @@ header.kontakt { //Header billede på kontakt
 
 /*================Kontakt oplysninger===============*/
 
+.KontaktOplysninger {
+  background-color: $color-graa;
+}
+
+.KontaktOplysninger h2 {
+  grid-column: 3/11 ;
+  grid-row: 1/2;
+  text-align: center;
+}
+
+.info {
+  grid-column: 3/11 ;
+  grid-row: 2/3;
+}
+
+.mail {
+  grid-column: 3/11 ;
+  display: flex;
+
+
+}
+
+.telefon {
+  grid-column: 3/11 ;
+  display: flex;
+
+}
 /*================Bestyrelsen===============*/
 
+#bestyrelsen {
+  grid-column: 3/11;
+  margin: 30px 0;
+}
+
+#bestyrelsen h2 {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.mereOgMindre {
+ margin: 30px auto;
+  display: flex;
+  grid-column: 1/13;
+}
+
+.more {
+  margin: auto;
+  grid-column: 1/13;
+}
+
+.personer {
+  margin: auto;
+
+}
 /*================Skriv nummer eller mail===============*/
+
+.nummer {
+  background-color: $color-graa;
+}
+
+.nummer h2 {
+  grid-column: 3/11;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.nummer p {
+  grid-column: 3/11;
+}
+
+.newletter {
+  grid-column: 3/11;
+  grid-row: 3/4;
+  margin: auto;
+  padding: 30px 0;
+
+
+}
+
+#conin{
+  height: 30px;
+  width: 400px;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  background-color: transparent;
+  font-size: 14px;
+  padding: 7px 2px;
+  font-weight: normal;
+  margin: 2px 0;
+}
+
+#send-alert {
+  margin: auto;
+}
 
 /*========================================================================
  ==============================fejlsider====================================

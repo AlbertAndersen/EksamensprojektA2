@@ -50,6 +50,14 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <!--Linker til smoothscroll fil-->
     <script type="text/javascript" src="../javascript/smoothscroll.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#readmore").click(function(){
+                $("#more").slideToggle("slow");
+            });
+        });
+
+    </script>
 
 
 </head>
@@ -139,7 +147,9 @@
 <header class="grid kontakt">
 
     <!-- Overskriften i header -->
-    <h1>kontakt</h1>
+    <h1>Har du yderligere spørgsmål?
+        Kontakt os her</h1>
+
 
 </header>
 
@@ -151,8 +161,18 @@
 <!---Kontakt oplysninger ------->
 
 <section class="KontaktOplysninger grid">
+    <h2>Kontakt oplysninger</h2>
+    <div class="info">
+        <div class="mail">
+            <div class="SoMe_icon"> <i class="fab fa-facebook-square fa-3x"></i> </div>
+            <h3>Eller@mail.dk</h3>
+        </div>
 
-    <div>HEJ</div>
+        <div class="telefon">
+            <div class="SoMe_icon"> <i class="fab fa-instagram fa-3x"></i> </div>
+            <h3>30 30 30 30</h3>
+        </div>
+    </div>
 
 </section>
 
@@ -160,7 +180,111 @@
 
 <section class="bestyrelsen grid">
 
-    <div>HEJ</div>
+
+    <div id="bestyrelsen">
+    <h2>BESTYRELSE</h2>
+
+    <p>I JCI Slagelse sidder der en bestyrelse, som træffer de beslutninger
+        om hvor vi gerne vil bevæge os hen. De står til rådighed hvis der er
+        brug for hjælp.
+
+    </p>
+    </div>
+
+    <div class="mereOgMindre">
+        <div id="readmore" class="ghost-button readmore">READ MORE</div>
+
+    </div>
+
+    <div id="more" class="more">
+
+        <div class="president personer">
+
+            <img src="../Images/logo-2.png" alt="">
+
+            <h3>President/formand </h3>
+
+            <p>Caroline Sørensen</p>
+            <p>Kommunikationsansvarlig</p>
+            <p> Mail: lp@jci-slagelse.dk</p>
+            <p> Tlf: 21 26 93 25</p>
+        </div>
+
+        <div class="president personer">
+
+            <img src="../Images/logo-2.png" alt="">
+
+            <h3>President/formand </h3>
+
+            <p>Caroline Sørensen</p>
+            <p>Kommunikationsansvarlig</p>
+            <p> Mail: lp@jci-slagelse.dk</p>
+            <p> Tlf: 21 26 93 25</p>
+        </div>
+
+        <div class="president personer">
+
+            <img src="../Images/logo-2.png" alt="">
+
+            <h3>President/formand </h3>
+
+            <p>Caroline Sørensen</p>
+            <p>Kommunikationsansvarlig</p>
+            <p> Mail: lp@jci-slagelse.dk</p>
+            <p> Tlf: 21 26 93 25</p>
+        </div>
+
+        <div class="president personer">
+
+            <img src="../Images/logo-2.png" alt="">
+
+            <h3>President/formand </h3>
+
+            <p>Caroline Sørensen</p>
+            <p>Kommunikationsansvarlig</p>
+            <p> Mail: lp@jci-slagelse.dk</p>
+            <p> Tlf: 21 26 93 25</p>
+        </div>
+
+        <div class="president personer">
+
+            <img src="../Images/logo-2.png" alt="">
+
+            <h3>President/formand </h3>
+
+            <p>Caroline Sørensen</p>
+            <p>Kommunikationsansvarlig</p>
+            <p> Mail: lp@jci-slagelse.dk</p>
+            <p> Tlf: 21 26 93 25</p>
+        </div>
+
+        <div class="president personer">
+
+            <img src="../Images/logo-2.png" alt="">
+
+            <h3>President/formand </h3>
+
+            <p>Caroline Sørensen</p>
+            <p>Kommunikationsansvarlig</p>
+            <p> Mail: lp@jci-slagelse.dk</p>
+            <p> Tlf: 21 26 93 25</p>
+        </div>
+
+
+
+    </div>
+
+    <style>
+
+        #more {
+
+            display: none;
+        }
+
+
+    </style>
+
+
 
 </section>
 
@@ -170,7 +294,21 @@
 
 <section class="nummer grid">
 
-    <div>HEJ</div>
+    <h2>HAR DU ANDRE SPØRGSMÅL</h2>
+    <p>Kunne du tænkte dig at høre mere om JCI
+        Slagelse, kan du udfylde formularen med din mail
+        og tlf nr. så kontakter vi dig hurtigst muligt.
+        Vi glæder os til at høre fra dig.
+
+    </p>
+
+    <form action="/action_page.php" class="newletter">
+        <input type="text" name="firstname" placeholder="Telefonnummer" id="conin">
+        <br><br>
+        <input type="text" name="mail" placeholder="E-mail" id="conin">
+        <br><br>
+        <div class="ghost-button" id="send-alert">Sign Up</div>
+    </form>
 
 </section>
 
@@ -178,7 +316,7 @@
 <!--- CTA -->
 <section class="cta ">
     <h2>GØR ET ELLER ANDET NU</h2>
-    <div class="ghost-button">Klik her dingus</div>
+    <div class="ghost-button mereOgMindre">Klik her dingus</div>
 </section>
 
 
