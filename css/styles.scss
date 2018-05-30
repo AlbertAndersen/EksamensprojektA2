@@ -102,7 +102,7 @@ $color-orange: #f37121; //den orange farve
 
 
 //knap
-.ghost-button, {
+.ghost-button {
   color: #ffffff;
   text-align: center;
   border: 2px solid #ffffff;
@@ -128,6 +128,14 @@ $color-orange: #f37121; //den orange farve
   background-position: center center;
   background-repeat: no-repeat ;
   min-width: 100px;
+}
+
+.web{
+  display: none;
+}
+
+.Mobil{
+  display: block;
 }
 
 /*========================================================================
@@ -361,27 +369,32 @@ header.medlemskab { //Header billede på medlemskab
 
 
 /*================HEADER===============*/
-.web{
-  display: none;
-}
 
-.Mobil{
-  display: block;
-}
 
-header.events { //Header billede på events
-  background-image: url("../Images/event.jpg");
+header.eventsh { //Header billede på events
+  background-image: url("../Images/headerTest.png");
 
 }
+
+
 
 /*================Kalender===============*/
+
+
+.kalender {
+  background-color: $color-mgraa;
+  display: flex;
+  flex-direction: column;
+}
+
 .kalenderOverskrift{
   font-size: 20px;
 }
 
 .tekstkalender{
-  text-align: center;
+
   font-size: 10px;
+  padding: 0 50px 50 50;
 
 }
 
@@ -395,15 +408,20 @@ header.events { //Header billede på events
 }
 
 .tekstinfo{
-  text-align: center;
+
   font-size: 10px;
-  color: black;
+
+  padding: 0 50px 50 50;
 }
 
 /*================events===============*/
 
 .events{
-  height: 380px;
+  background-color: $color-mgraa;
+}
+
+.eventtekst {
+
 }
 
 .eventoverskrift{
@@ -413,6 +431,7 @@ header.events { //Header billede på events
 .tekstevent{
   text-align: left;
   font-size: 10px;
+  padding: 0 50 0 50;
 }
 
 
@@ -435,33 +454,36 @@ header.kontakt { //Header billede på kontakt
 
 /*================Kontakt oplysninger===============*/
 
-.KontaktOplysninger {
-  background-color: $color-graa;
+.KontaktOplysninger { //farve på baggrund
+  background-color: $color-lgraa;
 }
 
-.KontaktOplysninger h2 {
+.KontaktOplysninger h2 { //placering af overskrift
   grid-column: 3/11 ;
   grid-row: 1/2;
   text-align: center;
 }
 
-.info {
+.SoMe_icon2 { // farve på ikoner og padding så de ikke står klods op af tekst
+  color: $color-orange;
+  padding: 0 20 0 0;
+
+}
+
+
+.info {//placering
   grid-column: 3/11 ;
   grid-row: 2/3;
+  margin: auto;
 }
 
-.mail {
-  grid-column: 3/11 ;
-  display: flex;
-
-
-}
-
-.telefon {
+.mail , .telefon { //placering. Flex for at ikon og mail står ved siden af hinanden
   grid-column: 3/11 ;
   display: flex;
 
 }
+
+
 /*================Bestyrelsen===============*/
 
 #bestyrelsen {
@@ -489,10 +511,12 @@ header.kontakt { //Header billede på kontakt
   margin: auto;
 
 }
+
+
 /*================Skriv nummer eller mail===============*/
 
 .nummer {
-  background-color: $color-graa;
+  background-color: $color-mgraa;
 }
 
 .nummer h2 {
@@ -510,11 +534,9 @@ header.kontakt { //Header billede på kontakt
   grid-row: 3/4;
   margin: auto;
   padding: 30px 0;
-
-
 }
 
-#conin{
+#conin{ // style på input
   height: 30px;
   width: 400px;
   color: #ffffff;
@@ -524,10 +546,6 @@ header.kontakt { //Header billede på kontakt
   padding: 7px 2px;
   font-weight: normal;
   margin: 2px 0;
-}
-
-#send-alert {
-  margin: auto;
 }
 
 /*========================================================================
@@ -634,10 +652,30 @@ header.kontakt { //Header billede på kontakt
   /*========================================================================
  ==============================Events====================================
 =========================================================================*/
+  .kalender {
+
+    flex-direction: row;
+  }
+
+  .events {
+    display: flex;
+    flex-direction: row-reverse;
+
+  }
 
   /*========================================================================
  ==============================Kontakt====================================
 =========================================================================*/
+  .flex { // laver flex på to personer så de står side om side. Padding så de ikke står klods på af hinanden
+    display: flex;
+    padding: 100px;
+  }
+
+  .personer { // padding så personer ikke står klods op af hinanden
+    padding: 0 100px;
+  }
+
+
 
 
 }
@@ -654,12 +692,11 @@ header.kontakt { //Header billede på kontakt
 
   /*================HEADER===============*/
 
-
-  .hamburger {//fjerner burgermenu
+  .hamburger { //fjerner burgermenu
     display: none;
   }
 
-  .menu {//viser normale menu
+  .menu { //viser normale menu
     display: block;
   }
 
@@ -679,25 +716,25 @@ header.kontakt { //Header billede på kontakt
  ==============================Events====================================
 =========================================================================*/
 
-.Mobil{
-  display: none;
-}
+  .Mobil {
+    display: none;
+  }
 
-.Web{
-  display: block;
-}
+  .Web {
+    display: block;
+  }
 
-.kalender{
-  justify-content: space-around;
-  display: flex;
-}
+  .kalender {
+    justify-content: space-around;
+    display: flex;
+  }
 
-.kalenderbillede{
-  margin-left: 100px;
-  margin-top: 130px;
-}
+  .kalenderbillede {
+    margin-left: 100px;
+    margin-top: 130px;
+  }
 
-.kalenderOverskrift
+}
 
 
   /*========================================================================
@@ -705,7 +742,7 @@ header.kontakt { //Header billede på kontakt
 =========================================================================*/
 
 
-}
+
 
 
 
