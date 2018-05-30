@@ -89,6 +89,7 @@ $color-blaa: #0097d7; //den blå farve
 $color-mgraa: #636363; //den mørke Grå farve
 $color-lgraa: #b7b7b7; //den lysegrå farve
 $color-orange: #f37121; //den orange farve
+@mixin Roboto {font-family: Roboto Condensed Regular}
 
 
 
@@ -360,16 +361,64 @@ header.medlemskab { //Header billede på medlemskab
 
 
 /*================HEADER===============*/
+.web{
+  display: none;
+}
+
+.Mobil{
+  display: block;
+}
 
 header.events { //Header billede på events
-  background-image: url("../Images/3.png");
+  background-image: url("../Images/event.jpg");
 
 }
 
 /*================Kalender===============*/
+.kalenderOverskrift{
+  font-size: 20px;
+}
+
+.tekstkalender{
+  text-align: center;
+  font-size: 10px;
+
+}
+
+/*=================Info=====================*/
+
+.info{
+  background-color: #b7b7b7;
+}
+.infooverskrift{
+  font-size: 20px;
+}
+
+.tekstinfo{
+  text-align: center;
+  font-size: 10px;
+  color: black;
+}
 
 /*================events===============*/
 
+.events{
+  height: 380px;
+}
+
+.eventoverskrift{
+  font-size: 20px;
+}
+
+.tekstevent{
+  text-align: left;
+  font-size: 10px;
+}
+
+
+li{
+  font-size: 10px;
+}
 /*================CTA===============*/
 
 /*========================================================================
@@ -538,6 +587,27 @@ header.kontakt { //Header billede på kontakt
   /*========================================================================
  ==============================Events====================================
 =========================================================================*/
+
+.Mobil{
+  display: none;
+}
+
+.Web{
+  display: block;
+}
+
+.kalender{
+  justify-content: space-around;
+  display: flex;
+}
+
+.kalenderbillede{
+  margin-left: 100px;
+  margin-top: 130px;
+}
+
+.kalenderOverskrift
+
 
   /*========================================================================
  ==============================Kontakt====================================
