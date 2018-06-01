@@ -324,6 +324,7 @@ header.omOs { //Header billede på om os
 
 header.medlemskab { //Header billede på medlemskab
   background-image: url("../Images/IMG_4340.png");
+  background-size: cover;
 }
 
 /*================Hvad er medlemskab===============*/
@@ -355,13 +356,13 @@ header.medlemskab { //Header billede på medlemskab
   width: 120px;
 }
 
-.memberflex{
-  width: 100%;
+.sendflex{
   display: flex;
   -webkit-flex: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
 }
+
 
 /*================Hvordan tilmelder man sig===============*/
 
@@ -475,7 +476,7 @@ header.kontakt { //Header billede på kontakt
 
 .SoMe_icon2 { // farve på ikoner og padding så de ikke står klods op af tekst
   color: $color-orange;
-  padding: 0 20 0 0;
+  padding: 0 20px 0 0;
 
 }
 
@@ -658,17 +659,26 @@ header.kontakt { //Header billede på kontakt
  ==============================Medlemsskab====================================
 =========================================================================*/
 
-  .medlemskabtxt, .tilmeldbillede{
-    grid-column: 1/5;
-  }
-
-  .tilmeld, .medlemsbillede{
-    grid-column: 6/13;
-  }
-
   .medlemsbillede, .tilmeldbillede{
-    display: inline;
+    display: block;
+    height: 300px;
   }
+
+  .tilmeld, .medlemskabtxt {
+    display: flex;
+    -webkit-flex: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+
+  .sendflex{
+    display: flex;
+    -webkit-flex: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
 
 
   /*========================================================================
