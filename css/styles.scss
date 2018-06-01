@@ -86,7 +86,8 @@ img {
 
 //Farve variabler
 $color-blaa: #0097d7; //den blå farve
-$color-graa: #333333; //den Grå farve
+$color-mgraa: #636363; //den mørke Grå farve
+$color-lgraa: #b7b7b7; //den lysegrå farve
 $color-orange: #f37121; //den orange farve
 @mixin Roboto {font-family: Roboto Condensed Regular}
 
@@ -108,8 +109,7 @@ $color-orange: #f37121; //den orange farve
   font-size: 14px;
   padding: 7px 2px;
   font-weight: normal;
-  margin: 2px 0;
-  margin-right: 12px;
+  margin: 10px;
   display: inline-block;
   text-decoration: none;
   min-width: 120px;
@@ -128,6 +128,14 @@ $color-orange: #f37121; //den orange farve
   background-position: center center;
   background-repeat: no-repeat ;
   min-width: 100px;
+}
+
+.web{
+  display: none;
+}
+
+.Mobil{
+  display: block;
 }
 
 /*========================================================================
@@ -184,7 +192,7 @@ header h1{
 /*================FOOTER===============*/
 footer {
   justify-items: center;
-  background-color: $color-graa;
+  background-color: $color-mgraa;
   padding: 50px 0px; //giver lidt white space i toppen og bunden af footer
 }
 
@@ -236,7 +244,7 @@ header.forside { //Header billede på forsiden
 /*================BLOB===============*/
 
 .blobs {
-  background-color: #505050;
+  background-color: $color-lgraa;
   min-height: 500px;
 }
 
@@ -267,7 +275,7 @@ header.forside { //Header billede på forsiden
 }
 /*================står for===============*/
 .staFor {
-  background-color: $color-graa;
+  background-color: $color-mgraa;
 }
 
 .staFor *{
@@ -321,9 +329,37 @@ header.medlemskab { //Header billede på medlemskab
 
 /*================Hvad er medlemskab===============*/
 
+.medlemskabtxt, .tilmeld, .priser{
+  background-color: $color-lgraa;
+}
+
+.nummer{
+  background-color: $color-mgraa;
+}
+
+.medlemskabtxt *, .tilmeld *, .priser *, .nummer *{
+  grid-column: 2/11;
+  padding: 20px;
+}
+
+.medlemsbillede, .tilmeldbillede{
+  display: none;
+}
+
+.memberinput{
+  color: #ffffff;
+  background-color: $color-lgraa;
+  border: 2px solid #ffffff;
+  font-size: 14px;
+  padding: 7px 2px;
+  margin: 10px;
+  width: 120px;
+}
+
 /*================Hvordan tilmelder man sig===============*/
 
 /*================priser===============*/
+
 
 /*================Skriv nummer eller mail===============*/
 
@@ -333,27 +369,34 @@ header.medlemskab { //Header billede på medlemskab
 
 
 /*================HEADER===============*/
-.web{
-  display: none;
-}
 
-.Mobil{
-  display: block;
-}
+
 
 header.events { //Header billede på events
   background-image: url("../Images/eventbillede.jpg");
 
+
 }
 
+
+
 /*================Kalender===============*/
+
+
+.kalender {
+  background-color: $color-mgraa;
+  display: flex;
+  flex-direction: column;
+}
+
 .kalenderOverskrift{
   font-size: 20px;
 }
 
 .tekstkalender{
-  text-align: center;
+
   font-size: 10px;
+  padding: 0 50px 50 50;
 
 }
 
@@ -367,15 +410,20 @@ header.events { //Header billede på events
 }
 
 .tekstinfo{
-  text-align: center;
+
   font-size: 10px;
-  color: black;
+
+  padding: 0 50px 50 50;
 }
 
 /*================events===============*/
 
 .events{
-  height: 380px;
+  background-color: $color-mgraa;
+}
+
+.eventtekst {
+
 }
 
 .eventoverskrift{
@@ -385,6 +433,7 @@ header.events { //Header billede på events
 .tekstevent{
   text-align: left;
   font-size: 10px;
+  padding: 0 50 0 50;
 }
 
 
@@ -407,9 +456,99 @@ header.kontakt { //Header billede på kontakt
 
 /*================Kontakt oplysninger===============*/
 
+.KontaktOplysninger { //farve på baggrund
+  background-color: $color-lgraa;
+}
+
+.KontaktOplysninger h2 { //placering af overskrift
+  grid-column: 3/11 ;
+  grid-row: 1/2;
+  text-align: center;
+}
+
+.SoMe_icon2 { // farve på ikoner og padding så de ikke står klods op af tekst
+  color: $color-orange;
+  padding: 0 20 0 0;
+
+}
+
+
+.info {//placering
+  grid-column: 3/11 ;
+  grid-row: 2/3;
+  margin: auto;
+}
+
+.mail , .telefon { //placering. Flex for at ikon og mail står ved siden af hinanden
+  grid-column: 3/11 ;
+  display: flex;
+
+}
+
+
 /*================Bestyrelsen===============*/
 
+#bestyrelsen {
+  grid-column: 3/11;
+  margin: 30px 0;
+}
+
+#bestyrelsen h2 {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.mereOgMindre {
+ margin: 30px auto;
+  display: flex;
+  grid-column: 1/13;
+}
+
+.more {
+  margin: auto;
+  grid-column: 1/13;
+}
+
+.personer {
+  margin: auto;
+
+}
+
+
 /*================Skriv nummer eller mail===============*/
+
+.nummer {
+  background-color: $color-mgraa;
+}
+
+.nummer h2 {
+  grid-column: 3/11;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.nummer p {
+  grid-column: 3/11;
+}
+
+.newletter {
+  grid-column: 3/11;
+  grid-row: 3/4;
+  margin: auto;
+  padding: 30px 0;
+}
+
+#conin{ // style på input
+  height: 30px;
+  width: 400px;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  background-color: transparent;
+  font-size: 14px;
+  padding: 7px 2px;
+  font-weight: normal;
+  margin: 2px 0;
+}
 
 /*========================================================================
  ==============================fejlsider====================================
@@ -515,10 +654,30 @@ header.kontakt { //Header billede på kontakt
   /*========================================================================
  ==============================Events====================================
 =========================================================================*/
+  .kalender {
+
+    flex-direction: row;
+  }
+
+  .events {
+    display: flex;
+    flex-direction: row-reverse;
+
+  }
 
   /*========================================================================
  ==============================Kontakt====================================
 =========================================================================*/
+  .flex { // laver flex på to personer så de står side om side. Padding så de ikke står klods på af hinanden
+    display: flex;
+    padding: 100px;
+  }
+
+  .personer { // padding så personer ikke står klods op af hinanden
+    padding: 0 100px;
+  }
+
+
 
 
 }
@@ -563,9 +722,30 @@ header.kontakt { //Header billede på kontakt
     display: none;
   }
 
+
   .Web {
     display: block;
   }
+
+  .kalender {
+    justify-content: space-around;
+    display: flex;
+  }
+
+  .kalenderbillede {
+    margin-left: 100px;
+    margin-top: 130px;
+  }
+
+}
+
+
+  /*========================================================================
+ ==============================Kontakt====================================
+=========================================================================*/
+
+
+
 
   .kalender {
     justify-content: space-around;
