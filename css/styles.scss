@@ -314,8 +314,7 @@ header.omOs { //Header billede på om os
 /*================HEADER===============*/
 
 header.medlemskab { //Header billede på medlemskab
-  background-image: url("../Images/2.png");
-
+  background-image: url("../Images/IMG_4340.png");
 }
 
 /*================Hvad er medlemskab===============*/
@@ -345,6 +344,14 @@ header.medlemskab { //Header billede på medlemskab
   padding: 7px 2px;
   margin: 10px;
   width: 120px;
+}
+
+.memberflex{
+  width: 100%;
+  display: flex;
+  -webkit-flex: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 /*================Hvordan tilmelder man sig===============*/
@@ -490,6 +497,19 @@ header.kontakt { //Header billede på kontakt
   /*========================================================================
  ==============================Medlemsskab====================================
 =========================================================================*/
+
+  .medlemskabtxt, .tilmeldbillede{
+    grid-column: 1/5;
+  }
+
+  .tilmeld, .medlemsbillede{
+    grid-column: 6/13;
+  }
+
+  .medlemsbillede, .tilmeldbillede{
+    display: inline;
+  }
+
 
   /*========================================================================
  ==============================Events====================================
