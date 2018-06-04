@@ -42,7 +42,7 @@
     <script src="https://use.fontawesome.com/75970a48c3.js"></script>
     <script src="../javascript/script.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -73,6 +73,10 @@
 
     </nav>
 </div>
+
+
+
+
 
 
 
@@ -141,7 +145,56 @@
     <!-- Overskriften i header -->
     <h1>Om os</h1>
 
+    <br><br>
+
 </header>
+
+<div class="tekstomos grid">
+    <div class="hvemoghvad"> HVEM OG HVAD ER <span style="color: #f37121">JCI?</span></div>
+    <div class="undertekstomsos">
+            JCI er et stort globalt netværk med afdelinger i mere end 100 lande og som har over 200.000 medlemmer på verdensplan. Det bærende i JCI er dog den lokale afdeling, hvor størstedelen af organisationens aktiviteter finder sted. 
+    </div>
+            <div class="omosslide">
+            I JCI har vi fokus på at udvikle os både personligt og fagligt. Vi har derfor løbende  kurser inden for udvikling af kompetencer som præsentationsteknik, projektledelse, lederegenskaber og kendskab til personprofiler, samt meget mere. <br><br>
+
+            Derudover samarbejder vi med erhvervslivet og laver projekter, der gavner samfundet. <br><br>
+
+            Vi tilbyder en unik mulighed for at skabe ledererfaring via projektledelse, eller en lederpost inden for organisationen. Det er derfor ikke noget krav, at du skal sidde i en lederstilling eller have en bestemt uddannelse , for at blive medlem af JCI. <br><br>
+
+            Vi tror på at værdien i forskellighed styrker os. Vores medlemmer består primært af erhvervsaktive mellem 20 og 30 år, der brænder for at tage nye udfordringer op. Som vil udvikle sig selv og skabe et netværk der spreder sig ud over mange forskellige brancher.
+            </div>
+        <div id="osom"> Læs mere her </div>
+</div>
+
+
+
+<script>
+    $(document).ready(function(){
+        $(".omosslide").slideUp(1);
+        $("#osom").click(function(){
+           $(".omosslide").slideToggle(500);
+        });
+    } );
+</script>
+
+
+<div class="omsosbestyrelse"> BESTYRELSE </div>
+
+<div class="omospartner">PARTNERE
+  <div class="billedomospartner"></div>
+   </div>
+
+<div class="omosboks">
+    <div class="omosevent">EVENTS
+    </div>
+    <div class="omosmedlemskab">MEDLEMSKAB</div>
+</div>
+
+<div class="omosbilleder">
+    <div class="boks1">TEST1</div>
+    <div class="boks1">TEST1</div>
+    <div class="boks1">TEST1</div>
+</div>
 
 
 
@@ -149,8 +202,8 @@
 
 <!--- CTA -->
 <section class="cta ">
-    <h2>GØR ET ELLER ANDET NU</h2>
-    <div class="ghost-button">Klik her dingus</div>
+    <h2>HØR MERE OM HVORDAN DU KAN BLIVE MEDLEM</h2>
+    <div class="ghost-button">Klik her</div>
 </section>
 
 

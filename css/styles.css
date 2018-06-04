@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
                                                .--.
                                                `.  \
@@ -26,82 +27,48 @@
                   '     /               `-----''               /     |
                   `...-'                                       `...-'
  */
-//kode opdeling kommentar
-
 /*========================================================================
  ==============================Side====================================
 =========================================================================*/
-
 /*-------------------------------------------------------------------------
 ----------------------------------Sektion-----------------------
 ---------------------------------------------------------------------------*/
-
 /*================Underdel================*/
-
-
-
-
-
-//her er alle de ting der ikke passer andre steder.
 /*========================================================================
  ==============================Generelt====================================
 =========================================================================*/
-
 body {
-  margin: 0; // Ingen kanter i siden af browser
-  color: white; // skrift farve
-  font-family: 'Raleway', sans-serif; //font
-  font-size: 16px; //normal tekst størrelse
+  margin: 0;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
   font-weight: normal;
-  background-color: #212121;
-}
+  background-color: #212121; }
 
 h1, h2, h4, h5, h6 {
-  margin: 0; // Ingen ydre margen fra overskrifter
+  margin: 0;
   padding: 30px;
-  letter-spacing: 5px; //samme som tracking i PS
-  text-transform: uppercase; //gør at alle overskrifter er UPPERCASE
-}
+  letter-spacing: 5px;
+  text-transform: uppercase; }
 
-h1{
-  text-align: center; //centrere teksten i header
-  color: #f37121;
-}
-
+h1 {
+  text-align: center;
+  color: #f37121; }
 
 p {
-  margin: 0; // Ingen ydre margen fra paragraffer
-  padding: 0px; // Ingen indre margen fra paragraffer
-}
+  margin: 0;
+  padding: 0px; }
 
-// Sikrer billeder er responsive
 img {
-  display: block; // Billeder er et element (laver linjeskift)
-  max-width: 100%; // Bredde mÂ maks fylde 100%
-  height: auto; // H¯jden skal tilpasse sig
-}
+  display: block;
+  max-width: 100%;
+  height: auto; }
 
-
-
-
-//Farve variabler
-$color-blaa: #0097d7; //den blå farve
-$color-mgraa: #636363; //den mørke Grå farve
-$color-lgraa: #b7b7b7; //den lysegrå farve
-$color-orange: #f37121; //den orange farve
-@mixin Roboto {font-family: Roboto Condensed Regular}
-
-
-
-//12 column grid
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-}
+  grid-template-rows: auto; }
 
-
-//knap
 .ghost-button {
   color: #ffffff;
   text-align: center;
@@ -112,242 +79,179 @@ $color-orange: #f37121; //den orange farve
   margin: 10px;
   display: inline-block;
   text-decoration: none;
-  min-width: 120px;
-}
+  min-width: 120px; }
 
 .ghost-button:hover, .ghost-button:active {
-  color: $color-blaa;
+  color: #0097d7;
   background: #ffffff;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
-//logo
 .logo {
-  background-image: url("../Images/logo-2.png"); //logo billedet
+  background-image: url("../Images/logo-2.png");
   background-size: contain;
   background-position: center center;
-  background-repeat: no-repeat ;
-  min-width: 100px;
-}
+  background-repeat: no-repeat;
+  min-width: 100px; }
 
-.web{
-  display: none;
-}
+.web {
+  display: none; }
 
-.Mobil{
-  display: block;
-}
+.Mobil {
+  display: block; }
 
 /*========================================================================
  ==============================Header, footer & Landing==========
 =========================================================================*/
-
 /*================NAV===============*/
-
-.nav { //farve og længde på navbar sektionen
-
+.nav {
   height: 100px;
-  background-color: $color-blaa;
-}
+  background-color: #0097d7; }
 
+.logo.nav {
+  grid-column: 2/3; }
 
-.logo.nav { //placering af logo
-  grid-column: 2/3;
-}
-
-
-
-.menu { //Navn menu
-  display: none; //vises ikke som standart
+.menu {
+  display: none;
   grid-column: 5/13;
-  margin: auto 0 auto auto; //centrere A tags
-
-}
+  margin: auto 0 auto auto; }
 
 .menu a {
   align-content: center;
-  text-decoration: none; //fjerner understregning
-  padding: 0 40px; //mellemrummet mellemn em
+  text-decoration: none;
+  padding: 0 40px;
   font-size: 20px;
-  color: #f6f7fd;
-}
-
-
+  color: #f6f7fd; }
 
 /*================HEADER===============*/
-
-header{ //højde
+header {
   min-height: 500px;
   max-height: 70vh;
   align-items: center;
-  background-position: center center; //centrere baggrundsbilledet
-}
+  background-position: center center; }
 
-header h1{
-  grid-column: 1/13;
-}
-
+header h1 {
+  grid-column: 1/13; }
 
 /*================FOOTER===============*/
 footer {
   justify-items: center;
-  background-color: $color-mgraa;
-  padding: 50px 0px; //giver lidt white space i toppen og bunden af footer
-}
+  background-color: #636363;
+  padding: 50px 0px; }
 
-.logo.foot { //placering og størrelse på logo i footer
+.logo.foot {
   grid-column: 6/8;
   min-width: 200px;
-  min-height: 150px;
-}
+  min-height: 150px; }
 
-.SoMe { //placering af some ikoner
+.SoMe {
   grid-row: 4/5;
   grid-column: 1/13;
   display: flex;
-  padding: 40px;
-}
+  padding: 40px; }
 
-.SoMe_icon { //farve og mellemrum på some ikoner
+.SoMe_icon {
   padding: 0 20px;
-  color: $color-orange;
+  color: #f37121; }
 
-}
-
-.sider { //placering af undersider i footer
+.sider {
   padding: 30px 0px;
   grid-row: 2/3;
   grid-column: 1/13;
-  text-align: center;
-}
+  text-align: center; }
 
-.kontakt { //placering af kontakt information
+.kontakt {
   grid-row: 3/4;
   grid-column: 1/13;
-  text-align: center;
-}
-
+  text-align: center; }
 
 /*========================================================================
  ==============================forside====================================
 =========================================================================*/
-
-
 /*================HEADER===============*/
-
-header.forside { //Header billede på forsiden
-  background-image: url("../Images/headerTest.png");
-
-}
+header.forside {
+  background-image: url("../Images/headerTest.png"); }
 
 /*================BLOB===============*/
-
 .blobs {
-  background-color: $color-lgraa;
-  min-height: 500px;
-}
+  background-color: #b7b7b7;
+  min-height: 500px; }
 
 .blob {
   grid-column: 5/10;
   padding: 30px 0px;
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
 .blob * {
   margin: auto;
   text-align: center;
-  padding: 10px;
-}
-
+  padding: 10px; }
 
 .blob1 {
-  grid-row: 1/2;
-}
+  grid-row: 1/2; }
 
 .blob2 {
-  grid-row: 2/3;
-}
+  grid-row: 2/3; }
 
 .blob3 {
-  grid-row: 3/4;
-}
+  grid-row: 3/4; }
+
 /*================står for===============*/
 .staFor {
-  background-color: $color-mgraa;
-}
+  background-color: #636363; }
 
-.staFor *{
+.staFor * {
   padding: 20px;
-  grid-column: 2/11;
-
-
-}
+  grid-column: 2/11; }
 
 /*================CTA===============*/
-
 .cta {
   text-align: center;
   background-color: #f37121;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-}
+  padding: 20px; }
 
-
-
-.cta .ghost-button{
-  margin: auto;
-}
-
-
+.cta .ghost-button {
+  margin: auto; }
 
 /*========================================================================
  ==============================Om os====================================
 =========================================================================*/
-
-
 /*================HEADER===============*/
-
-header.omOs { //Header billede på om os
-  background: url("../Images/omosheader.png") center;
-}
+header.omOs {
+  background: url("../Images/omosheader.png") center; }
 
 .tekstomos {
   background-color: #b7b7b7;
   color: white;
   font-size: x-large;
   text-align: center;
-  padding-top: 20px;
-}
+  padding-top: 20px; }
 
-.undertekstomsos{
+.undertekstomsos {
   grid-row: 2/3;
-  grid-column: 2/12;
-}
+  grid-column: 2/12; }
 
-.omosslide{
+.omosslide {
   padding: 0px 20px 20px 20px;
   margin: 0;
   background-color: #b7b7b7;
   font-size: 16px;
   grid-column: 2/12;
   text-align: left;
-  grid-row: 3/4;
+  grid-row: 3/4; }
 
-}
-
-.hvemoghvad{
+.hvemoghvad {
   grid-row: 1/2;
   grid-column: 2/11;
-  font-size: 24px;
-}
+  font-size: 24px; }
 
 #osom {
-  border: thin solid $color-orange;
+  border: thin solid #f37121;
   width: 130px;
   color: white;
-  background-color: $color-orange;
+  background-color: #f37121;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -355,17 +259,13 @@ header.omOs { //Header billede på om os
   font-size: 16px;
   grid-column: 2/11;
   grid-row: 4/5;
-  margin-bottom: 10px;
-
-}
+  margin-bottom: 10px; }
 
 .undertekstomsos {
   text-align: left;
   font-size: 16px;
   padding: 20px;
-  line-height: 20px;
-
-}
+  line-height: 20px; }
 
 .omsosbestyrelse {
   background-color: #636363;
@@ -373,290 +273,198 @@ header.omOs { //Header billede på om os
   color: white;
   font-size: x-large;
   text-align: center;
-  padding-top: 20px;
-}
+  padding-top: 20px; }
 
 .omospartner {
   height: 100px;
   background-color: #b7b7b7;
-  color: $color-orange;
+  color: #f37121;
   font-size: x-large;
   text-align: center;
-  padding-top: 10px;
-}
-
-.billedomospartner {
-}
+  padding-top: 10px; }
 
 .omosboks {
   background-color: #636363;
   height: 150px;
-  padding-top: 35px;
-}
+  padding-top: 35px; }
 
 .omosevent {
-  border: thin solid $color-orange;
+  border: thin solid #f37121;
   width: 130px;
   color: white;
-  background-color: $color-orange;
+  background-color: #f37121;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  padding: 17px;
-}
+  padding: 17px; }
 
 .omosmedlemskab {
-  border: thin solid $color-orange;
+  border: thin solid #f37121;
   width: 130px;
   color: white;
-  background-color: $color-orange;
+  background-color: #f37121;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
-  padding: 17px;
-}
+  padding: 17px; }
 
 .omosbilleder {
   display: grid;
-  grid-template-rows: (3, 1fr);
-  grid-template-columns: (1, 1fr);
+  grid-template-rows: 3, 1fr;
+  grid-template-columns: 1, 1fr;
   grid-gap: 40px;
-  justify-content: space-around;
-}
-
-.item1:nth-of-type(1) {
-
-}
-
-
-
-
-
-
+  justify-content: space-around; }
 
 /*========================================================================
  ==============================Medlemsskab====================================
 =========================================================================*/
-
-
 /*================HEADER===============*/
-
-header.medlemskab { //Header billede på medlemskab
-  background-image: url("../Images/2.png");
-
-}
+header.medlemskab {
+  background-image: url("../Images/2.png"); }
 
 /*================Hvad er medlemskab===============*/
+.medlemskabtxt, .tilmeld, .priser {
+  background-color: #b7b7b7; }
 
-.medlemskabtxt, .tilmeld, .priser{
-  background-color: $color-lgraa;
-}
+.nummer {
+  background-color: #636363; }
 
-.nummer{
-  background-color: $color-mgraa;
-}
-
-.medlemskabtxt *, .tilmeld *, .priser *, .nummer *{
+.medlemskabtxt *, .tilmeld *, .priser *, .nummer * {
   grid-column: 2/11;
-  padding: 20px;
-}
+  padding: 20px; }
 
-.medlemsbillede, .tilmeldbillede{
-  display: none;
-}
+.medlemsbillede, .tilmeldbillede {
+  display: none; }
 
-.memberinput{
+.memberinput {
   color: #ffffff;
-  background-color: $color-lgraa;
+  background-color: #b7b7b7;
   border: 2px solid #ffffff;
   font-size: 14px;
   padding: 7px 2px;
   margin: 10px;
-  width: 120px;
-}
+  width: 120px; }
 
 /*================Hvordan tilmelder man sig===============*/
-
 /*================priser===============*/
-
-
 /*================Skriv nummer eller mail===============*/
-
 /*========================================================================
  ==============================Events====================================
 =========================================================================*/
-
-
 /*================HEADER===============*/
-
-
-header.eventsh { //Header billede på events
-  background-image: url("../Images/headerTest.png");
-
-}
-
-
+header.eventsh {
+  background-image: url("../Images/headerTest.png"); }
 
 /*================Kalender===============*/
-
-
 .kalender {
-  background-color: $color-mgraa;
+  background-color: #636363;
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
-.kalenderOverskrift{
-  font-size: 20px;
-}
+.kalenderOverskrift {
+  font-size: 20px; }
 
-.tekstkalender{
-
+.tekstkalender {
   font-size: 10px;
-  padding: 0 50px 50px 50px;
-
-}
+  padding: 0 50px 50px 50px; }
 
 /*=================Info=====================*/
+.info {
+  background-color: #b7b7b7; }
 
-.info{
-  background-color: #b7b7b7;
-}
-.infooverskrift{
-  font-size: 20px;
-}
+.infooverskrift {
+  font-size: 20px; }
 
-.tekstinfo{
-
+.tekstinfo {
   font-size: 10px;
-
-  padding: 0 50px 50px 50px;
-}
+  padding: 0 50px 50px 50px; }
 
 /*================events===============*/
+.events {
+  background-color: #636363; }
 
-.events{
-  background-color: $color-mgraa;
-}
+.eventoverskrift {
+  font-size: 20px; }
 
-.eventtekst {
-
-}
-
-.eventoverskrift{
-  font-size: 20px;
-}
-
-.tekstevent{
+.tekstevent {
   text-align: left;
   font-size: 10px;
-  padding: 0 50px 0 50px;
-}
+  padding: 0 50px 0 50px; }
 
+li {
+  font-size: 10px; }
 
-li{
-  font-size: 10px;
-}
 /*================CTA===============*/
-
 /*========================================================================
  ==============================Kontakt====================================
 =========================================================================*/
-
-
 /*================HEADER===============*/
-
-header.kontakt { //Header billede på kontakt
-  background-image: url("../Images/4.png");
-
-}
+header.kontakt {
+  background-image: url("../Images/4.png"); }
 
 /*================Kontakt oplysninger===============*/
+.KontaktOplysninger {
+  background-color: #b7b7b7; }
 
-.KontaktOplysninger { //farve på baggrund
-  background-color: $color-lgraa;
-}
-
-.KontaktOplysninger h2 { //placering af overskrift
-  grid-column: 3/11 ;
+.KontaktOplysninger h2 {
+  grid-column: 3/11;
   grid-row: 1/2;
-  text-align: center;
-}
+  text-align: center; }
 
-.SoMe_icon2 { // farve på ikoner og padding så de ikke står klods op af tekst
-  color: $color-orange;
-  padding: 0 20px 0 0;
+.SoMe_icon2 {
+  color: #f37121;
+  padding: 0 20px 0 0; }
 
-}
-
-
-.info {//placering
-  grid-column: 3/11 ;
+.info {
+  grid-column: 3/11;
   grid-row: 2/3;
-  margin: auto;
-}
+  margin: auto; }
 
-.mail , .telefon { //placering. Flex for at ikon og mail står ved siden af hinanden
-  grid-column: 3/11 ;
-  display: flex;
-
-}
-
+.mail, .telefon {
+  grid-column: 3/11;
+  display: flex; }
 
 /*================Bestyrelsen===============*/
-
 #bestyrelsen {
   grid-column: 3/11;
-  margin: 30px 0;
-}
+  margin: 30px 0; }
 
 #bestyrelsen h2 {
   padding: 30px 0;
-  text-align: center;
-}
+  text-align: center; }
 
 .mereOgMindre {
- margin: 30px auto;
+  margin: 30px auto;
   display: flex;
-  grid-column: 1/13;
-}
+  grid-column: 1/13; }
 
 .more {
   margin: auto;
-  grid-column: 1/13;
-}
+  grid-column: 1/13; }
 
 .personer {
-  margin: auto;
-
-}
-
+  margin: auto; }
 
 /*================Skriv nummer eller mail===============*/
-
 .nummer {
-  background-color: $color-mgraa;
-}
+  background-color: #636363; }
 
 .nummer h2 {
   grid-column: 3/11;
   padding: 30px 0;
-  text-align: center;
-}
+  text-align: center; }
 
 .nummer p {
-  grid-column: 3/11;
-}
+  grid-column: 3/11; }
 
 .newletter {
   grid-column: 3/11;
   grid-row: 3/4;
   margin: auto;
-  padding: 30px 0;
-}
+  padding: 30px 0; }
 
-#conin{ // style på input
+#conin {
   height: 30px;
   width: 400px;
   color: #ffffff;
@@ -665,22 +473,16 @@ header.kontakt { //Header billede på kontakt
   font-size: 14px;
   padding: 7px 2px;
   font-weight: normal;
-  margin: 2px 0;
-}
+  margin: 2px 0; }
 
 /*========================================================================
  ==============================fejlsider====================================
 =========================================================================*/
-
 .fejl h1 {
-  font-size: 100px;
-}
+  font-size: 100px; }
 
 /*================404===============*/
-
 /*================403===============*/
-
-
 /*
 
               ,---------------------------,
@@ -705,172 +507,112 @@ header.kontakt { //Header billede på kontakt
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 */
-
 /********************************************************************************
  ****************************Responsivt-Tablet**********************************
 *********************************************************************************/
-
 @media screen and (min-width: 750px) {
-
   /*========================================================================
    ==============================Header, footer & Landing===================
   =========================================================================*/
-
   /*================Footer===============*/
-  .sider { //gør at undersideren står ved siden af hinanden i footer
-    display: flex;
-  }
+  .sider {
+    display: flex; }
 
-  h3 { //giver undersideren lidt plads
-    padding: 0 20px;
-  }
+  h3 {
+    padding: 0 20px; }
 
   /*========================================================================
    ==============================Forside============================================
    =========================================================================*/
-
   /*================blobs===============*/
-
   .blob {
-    grid-row: 1/2;
-  }
+    grid-row: 1/2; }
 
   .blob1 {
-    grid-column: 1/5;
-  }
+    grid-column: 1/5; }
 
   .blob2 {
-    grid-column: 5/9;
-  }
+    grid-column: 5/9; }
 
   .blob3 {
-    grid-column: 9/13;
-  }
+    grid-column: 9/13; }
 
   /*================stafor===============*/
-
   .staForTekst {
     grid-column: 2/8;
-    grid-row: 1/2;
-  }
+    grid-row: 1/2; }
 
   .staFor .gallery {
     grid-column: 9/12;
-    grid-row: 1/2;
-  }
-
-
+    grid-row: 1/2; }
 
   /*========================================================================
  ==============================Om os====================================
 =========================================================================*/
-
   /*========================================================================
  ==============================Medlemsskab====================================
 =========================================================================*/
-
   /*========================================================================
  ==============================Events====================================
 =========================================================================*/
   .kalender {
-
-    flex-direction: row;
-  }
+    flex-direction: row; }
 
   .events {
     display: flex;
-    flex-direction: row-reverse;
-
-  }
+    flex-direction: row-reverse; }
 
   /*========================================================================
  ==============================Kontakt====================================
 =========================================================================*/
-  .flex { // laver flex på to personer så de står side om side. Padding så de ikke står klods på af hinanden
+  .flex {
     display: flex;
-    padding: 100px;
-  }
+    padding: 100px; }
 
-  .personer { // padding så personer ikke står klods op af hinanden
-    padding: 0 100px;
-  }
-
-
-
-
-}
-
+  .personer {
+    padding: 0 100px; } }
 /********************************************************************************
  ****************************Responsivt-Computer**********************************
 *********************************************************************************/
-
 @media screen and (min-width: 1200px) {
-
   /*========================================================================
    ==============================Header, footer & Landing===========================
    =========================================================================*/
-
   /*================HEADER===============*/
+  .hamburger {
+    display: none; }
 
-  .hamburger { //fjerner burgermenu
-    display: none;
-  }
-
-  .menu { //viser normale menu
-    display: block;
-  }
+  .menu {
+    display: block; }
 
   /*========================================================================
    ==============================Forside============================================
    =========================================================================*/
-
   /*========================================================================
  ==============================Om os====================================
 =========================================================================*/
-
   /*========================================================================
  ==============================Medlemsskab====================================
 =========================================================================*/
-
   /*========================================================================
  ==============================Events====================================
 =========================================================================*/
-
   .Mobil {
-    display: none;
-  }
+    display: none; }
 
   .Web {
-    display: block;
-  }
+    display: block; }
 
   .kalender {
     justify-content: space-around;
-    display: flex;
-  }
+    display: flex; }
 
   .kalenderbillede {
     margin-left: 100px;
-    margin-top: 130px;
-  }
-
-}
-
-
+    margin-top: 130px; } }
   /*========================================================================
  ==============================Kontakt====================================
 =========================================================================*/
-
-
-
-
-
-
-
-
-
-
-
 /*
 
 /'.'.'.\
@@ -879,42 +621,44 @@ header.kontakt { //Header billede på kontakt
 \,,,,,,/
 
 */
-
-
-
 /*================BURGER MENU===============*/
-// den ligger i bunden fordi den fylder meget, og ikke skal ændres på :)
-
-.hamburger{
+.hamburger {
   z-index: 2;
   position: fixed;
   top: 20px;
-  right: 45px;
-}
+  right: 45px; }
 
 /* The Overlay (background) */
 .overlay {
   /* Height & width depends on how you want to reveal the overlay (see JS below) */
   height: 100%;
   width: 0;
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
   left: 0;
   top: 0;
-  background-color: rgb(0,0,0); /* Black fallback color */
-  background-color: rgba(0, 151, 215, 0.9); /* Black w/opacity */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-}
+  background-color: black;
+  /* Black fallback color */
+  background-color: rgba(0, 151, 215, 0.9);
+  /* Black w/opacity */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */ }
 
 /* Position the content inside the overlay */
 .overlay-content {
   position: relative;
-  top: 25%; /* 25% from the top */
-  width: 100%; /* 100% width */
-  text-align: center; /* Centered text/links */
-  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
-}
+  top: 25%;
+  /* 25% from the top */
+  width: 100%;
+  /* 100% width */
+  text-align: center;
+  /* Centered text/links */
+  margin-top: 30px;
+  /* 30px top margin to avoid conflict with the close button on smaller screens */ }
 
 /* The navigation links inside the overlay */
 .overlay a {
@@ -922,36 +666,32 @@ header.kontakt { //Header billede på kontakt
   text-decoration: none;
   font-size: 22px;
   color: #f6f7fd;
-  display: block; /* Display block instead of inline */
-  transition: 0.3s; /* Transition effects on hover (color) */
+  display: block;
+  /* Display block instead of inline */
+  transition: 0.3s;
+  /* Transition effects on hover (color) */
   letter-spacing: 5px;
-  font-weight: 100;
-}
+  font-weight: 100; }
 
 /* When you mouse over the navigation links, change their color */
 .overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
-}
+  color: #f1f1f1; }
 
 /* Position the close button (top right corner) */
 .overlay .closebtn {
   position: absolute;
   top: 20px;
   right: 45px;
-  font-size: 60px;
+  font-size: 60px; }
 
-}
-
-  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px){
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
   .overlay a {
-    font-size: 20px
-  }
+    font-size: 20px; }
+
   .overlay .closebtn {
     font-size: 40px;
     top: 15px;
-    right: 35px;
-  }
-}
+    right: 35px; } }
 
-
+/*# sourceMappingURL=styles.css.map */
