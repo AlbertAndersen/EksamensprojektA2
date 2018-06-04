@@ -443,8 +443,8 @@ header.omOs { //Header billede på om os
 /*================HEADER===============*/
 
 header.medlemskab { //Header billede på medlemskab
-  background-image: url("../Images/2.png");
-
+  background-image: url("../Images/IMG_4340.png");
+  background-size: cover;
 }
 
 /*================Hvad er medlemskab===============*/
@@ -476,6 +476,14 @@ header.medlemskab { //Header billede på medlemskab
   width: 120px;
 }
 
+.sendflex{
+  display: flex;
+  -webkit-flex: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+
 /*================Hvordan tilmelder man sig===============*/
 
 /*================priser===============*/
@@ -491,8 +499,10 @@ header.medlemskab { //Header billede på medlemskab
 /*================HEADER===============*/
 
 
-header.eventsh { //Header billede på events
-  background-image: url("../Images/headerTest.png");
+
+header.events { //Header billede på events
+  background-image: url("../Images/eventbillede.jpg");
+
 
 }
 
@@ -769,6 +779,28 @@ header.kontakt { //Header billede på kontakt
  ==============================Medlemsskab====================================
 =========================================================================*/
 
+  .medlemsbillede, .tilmeldbillede{
+    display: block;
+    height: 300px;
+  }
+
+  .tilmeld, .medlemskabtxt {
+    display: flex;
+    -webkit-flex: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+
+  .sendflex{
+    display: flex;
+    -webkit-flex: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+
+
   /*========================================================================
  ==============================Events====================================
 =========================================================================*/
@@ -840,6 +872,7 @@ header.kontakt { //Header billede på kontakt
     display: none;
   }
 
+
   .Web {
     display: block;
   }
@@ -864,93 +897,146 @@ header.kontakt { //Header billede på kontakt
 
 
 
+  .kalender {
+    justify-content: space-around;
+    display: flex;
+    margin-top: 50px;
+  }
+
+  .kalenderbillede {
+    margin-right: 150px;
+    margin-bottom: 50px;
+  }
+
+  .tekstkalender{
+    padding-left: 200px;
+    padding-right: 200px;
+    font-size: 13px;
+  }
+
+  .tekstinfo{
+    padding-left: 400px;
+    padding-right: 400px;
+    font-size: 13px;
+  }
+
+  .event{
+    justify-content: space-around;
+    display: flex;
+    height: 600px;
+  }
+
+
+  .eventbillede{
+    width: 600px;
+    height: 300px;
+    margin-top: 100px;
+    margin-left: 75px;
+  }
+
+  .eventoverskrift{
+    margin-top: 100px;
+  }
+
+  .eventtekst{
+    padding-right: 100px;
+    padding-left: 100px;
+    font-size: 13px;
+  }
+
+  .eventteksten{
+    padding-left: 100px;
+    font-size: 13px;
+  }
+
+  ul{
+    padding-left: 110px;
+    padding-right: 80px;
+    font-size: 13px;
+  }
 
 
 
+    /*========================================================================
+   ==============================Kontakt====================================
+  =========================================================================*/
+    /*
 
+    /'.'.'.\
+    &%$&%$&r
+    (#####u)
+    \,,,,,,/
 
+    */
+    /*================BURGER MENU===============*/
+    // den ligger i bunden fordi den fylder meget, og ikke skal ændres på :)
+  .hamburger {
+    z-index: 2;
+    position: fixed;
+    top: 20px;
+    right: 45px;
+  }
 
+  /* The Overlay (background) */
+  .overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0); /* Black fallback color */
+    background-color: rgba(0, 151, 215, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
 
-/*
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
 
-/'.'.'.\
-&%$&%$&r
-(#####u)
-\,,,,,,/
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #f6f7fd;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+    letter-spacing: 5px;
+    font-weight: 100;
+  }
 
-*/
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
 
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
 
-
-/*================BURGER MENU===============*/
-// den ligger i bunden fordi den fylder meget, og ikke skal ændres på :)
-
-.hamburger{
-  z-index: 2;
-  position: fixed;
-  top: 20px;
-  right: 45px;
-}
-
-/* The Overlay (background) */
-.overlay {
-  /* Height & width depends on how you want to reveal the overlay (see JS below) */
-  height: 100%;
-  width: 0;
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  background-color: rgb(0,0,0); /* Black fallback color */
-  background-color: rgba(0, 151, 215, 0.9); /* Black w/opacity */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-}
-
-/* Position the content inside the overlay */
-.overlay-content {
-  position: relative;
-  top: 25%; /* 25% from the top */
-  width: 100%; /* 100% width */
-  text-align: center; /* Centered text/links */
-  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
-}
-
-/* The navigation links inside the overlay */
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 22px;
-  color: #f6f7fd;
-  display: block; /* Display block instead of inline */
-  transition: 0.3s; /* Transition effects on hover (color) */
-  letter-spacing: 5px;
-  font-weight: 100;
-}
-
-/* When you mouse over the navigation links, change their color */
-.overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
-}
-
-/* Position the close button (top right corner) */
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-
-}
+  }
 
   /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px){
-  .overlay a {
-    font-size: 20px
-  }
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px
+    }
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
   }
 }
 
