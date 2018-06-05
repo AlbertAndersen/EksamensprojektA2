@@ -343,6 +343,10 @@ header.omOs { //Header billede på om os
   font-size: 24px;
 }
 
+.overskriftomos {
+  padding: 30px;
+}
+
 #osom {
   border: thin solid $color-orange;
   width: 130px;
@@ -369,29 +373,26 @@ header.omOs { //Header billede på om os
 
 .omsosbestyrelse {
   background-color: #636363;
-  height: 400px;
   color: white;
   font-size: x-large;
   text-align: center;
   padding-top: 20px;
+  height: 500px;
 }
 
 .omospartner {
-  height: 100px;
+
   background-color: #b7b7b7;
   color: $color-orange;
   font-size: x-large;
   text-align: center;
-  padding-top: 10px;
-}
 
-.billedomospartner {
 }
 
 .omosboks {
   background-color: #636363;
-  height: 150px;
-  padding-top: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .omosevent {
@@ -423,6 +424,7 @@ header.omOs { //Header billede på om os
   grid-template-columns: (1, 1fr);
   grid-gap: 40px;
   justify-content: space-around;
+  background-color: #b7b7b7;
 }
 
 .item1:nth-of-type(1) {
@@ -872,7 +874,6 @@ header.kontakt { //Header billede på kontakt
     display: none;
   }
 
-
   .Web {
     display: block;
   }
@@ -887,15 +888,9 @@ header.kontakt { //Header billede på kontakt
     margin-top: 130px;
   }
 
-}
-
-
   /*========================================================================
  ==============================Kontakt====================================
 =========================================================================*/
-
-
-
 
   .kalender {
     justify-content: space-around;
@@ -908,59 +903,62 @@ header.kontakt { //Header billede på kontakt
     margin-bottom: 50px;
   }
 
-  .tekstkalender{
+  .tekstkalender {
     padding-left: 200px;
     padding-right: 200px;
     font-size: 13px;
   }
 
-  .tekstinfo{
+  .tekstinfo {
     padding-left: 400px;
     padding-right: 400px;
     font-size: 13px;
   }
 
-  .event{
+  .event {
     justify-content: space-around;
     display: flex;
     height: 600px;
   }
 
-
-  .eventbillede{
+  .eventbillede {
     width: 600px;
     height: 300px;
     margin-top: 100px;
     margin-left: 75px;
   }
 
-  .eventoverskrift{
+  .eventoverskrift {
     margin-top: 100px;
   }
 
-  .eventtekst{
+  .eventtekst {
     padding-right: 100px;
     padding-left: 100px;
     font-size: 13px;
   }
 
-  .eventteksten{
+  .eventteksten {
     padding-left: 100px;
     font-size: 13px;
   }
 
-  ul{
+  ul {
     padding-left: 110px;
     padding-right: 80px;
     font-size: 13px;
   }
 
-
+}
 
     /*========================================================================
    ==============================Kontakt====================================
   =========================================================================*/
     /*
+
+
+
+
 
     /'.'.'.\
     &%$&%$&r
@@ -1038,6 +1036,6 @@ header.kontakt { //Header billede på kontakt
       right: 35px;
     }
   }
-}
+
 
 
