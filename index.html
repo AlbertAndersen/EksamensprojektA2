@@ -1,5 +1,5 @@
 <!-- Fortæller det er html5 -->
-
+<!DOCTYPE html>
 <!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
 <html lang="en">
 
@@ -114,12 +114,12 @@
     </script>
 
     <!-- Her ligger logo  -->
-    <div class="logo navigation"></div>
+    <a class="logo navigation" href="index.html"  ></a>
 
     <!-- Den menu der vises på computer -->
     <div class="menu">
 
-        <a href="#top" class="smoothScroll" onclick="closeNav()">Forside</a>
+        <a href="#top" class="smoothScroll" onclick="closeNav()"><div class="denneSide">Forside</div></a>
         <a href="undersider/omOs.html">Om os</a>
         <a href="undersider/medlemskab.html">Medlemskab</a>
         <a href="undersider/events.html">Events</a>
@@ -139,7 +139,7 @@
 <header class="grid forside">
 
     <!-- Overskriften i header -->
-    <h1>BE BETTER</h1>
+    <h1>Med JCI kan du få real-life ledererfaring</h1>
 
 </header>
 
@@ -153,24 +153,24 @@
 <section class="blobs grid">
 
     <div class="blob blob1">
-        <img src="Images/logo-2.png" alt="">
-        <h2>Blob 1</h2>
+        <div class="stortBogstav">G</div>
+        <h2>Grangia Erhvervspris</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <div class="ghost-button">Læs mere</div>
+        <div class="ghost-button">Grangia</div>
     </div>
 
     <div class="blob blob2">
-        <img src="Images/logo-2.png" alt="">
-        <h2>Blob 2</h2>
-        <p>Curabitur sit amet eleifend orci, ut tempor nisl. </p>
-        <div class="ghost-button">Læs mere</div>
+        <div class="stortBogstav">M</div>
+        <h2>Bliv Medlem i dag</h2>
+        <p>Blev medlem af danmarks største netværk for unge. Eller kom gratis forbi og se om det er noget for dig.</p>
+        <div class="ghost-button">Medlemskab</div>
     </div>
 
     <div class="blob blob3">
-        <img src="Images/logo-2.png" alt="">
-        <h2>Blob 3</h2>
-        <p>Duis augue lacus, blandit vitae tincidunt a, viverra sed lorem.</p>
-        <div class="ghost-button">Læs mere</div>
+        <div class="stortBogstav">E</div>
+        <h2>Workshops, foredrag og andre events</h2>
+        <p>Som en del af JCI Slagelse får du mulighed for at deltage i events der hjælper dig</p>
+        <div class="ghost-button">Events</div>
     </div>
 
 </section>
@@ -179,28 +179,46 @@
 <section class="staFor grid">
 
     <div class="staForTekst">
-        <h2>Hvad står vi for</h2>
-        <p>Lorem ipsum dolor sit amet, ut maecenas magna fringilla,
-            vestibulum posuere feugiat aenean. In lectus vivamus sodales, arcu sem lacus ligula at adipiscing, a proin. Integer proin id a ut eu, ultrices aliquam rhoncus mauris lectus sed magnam, at
-            imperdiet. Nam integer tortor, in diam sed sagittis, turpis sit amet, torquent dui massa turpis velit, sed viverra.
-            Vero vel phasellus tellus facilisis feugiat, suscipit egestas wisi
-            vestibulum nonummy dolores magna, ut dolor dictum, sodales
-            suspendisse. Consectetuer velit semper aliquet fermentum, lectus nibh accusamus duis est, ad eleifend ornare ac semper. In ante nam semper ut adipiscing, nulla pulvinar rutrum sed at, vel felis eleifend adipiscing duis viverra, sed venenatis.
-            Nonummy dui mauris imperdiet duis dolor odio. Iaculis lobortis,
-            interdum vestibulum, duis nam varius, integer integer in tempor.</p>
+        <h2>Hvad er JCI Slagelse?</h2>
+        <p>
+            JCI Slagelse er <b>et professionelt netværk</b> for unge. Vi har igennem 20 år hjulpet unge mellem 20 og 40 år med:
+        </p>
+        <ul>
+            <li>Personlig udvikling</li>
+            <li> bygge livslange netværk</li>
+            <li><a href="">Styrke talegave</a></li>
+            <li>reel arbejdserfaring</li>
+        </ul
+        <p>Dette gør vi gennem projekter der gavne dit lokalesamfund.
+        </p>
+              <h3>Hvorfor vælge JCI Slagelse?</h3>
+        <p>Alle vores medlemmer er <b>ambitiøse unge</b>. Hos os er kodeordet nemlig Ambitionsniveau. Det er derfor vigtigt for os, at alle medlemmer gør en aktiv indsats
+            <a href="">i vores projekter</a>. Hos os får du kun noget ud af, det hvis du selv gør en indsats. Der er derfor mulighed for at lære så meget du har lyst til.
+             </p>
+                <h3>Hvad kan JCI Slagelse tilbyde dig?</h3>
+             <p> Vi tilbyder:</p>
+        <ul>
+            <li><a href=>workshop</a></li>
+            <li><a href=>foredrag</a></li>
+            <li><a href=>events</a></li>
+        </ul>
+        <p class="lidtPadding">  Ved at deltage i disse events får du reel erfaring og bedre jobmuligheder.
+        </p>
     </div>
 
+
     <div class="gallery">
-        <img src="Images/headerTest.png/" alt="">
+
     </div>
+
 
 </section>
 
 
 <!--- CTA -->
 <section class="cta ">
-    <h2>GØR ET ELLER ANDET NU</h2>
-    <div class="ghost-button">Klik her dingus</div>
+    <h2>Bliv medlem i dag</h2>
+    <div class="ghost-button" ><a href="undersider/medlemskab.html">Medlemskab</a></div>
 </section>
 
 
@@ -224,20 +242,20 @@
     <!-- undersider -->
     <div class="sider">
 
-        <h3>Forside</h3>
-        <h3>Om os</h3>
-        <h3>Events</h3>
-        <h3>Medlemskab</h3>
-        <h3>Kontakt</h3>
+        <a href="#top" class="smoothScroll" onclick="closeNav()"><div class="denneSide">Forside</div></a>
+        <a href="undersider/omOs.html">Om os</a>
+        <a href="undersider/medlemskab.html">Medlemskab</a>
+        <a href="undersider/events.html">Events</a>
+        <a href="undersider/kontakt.html">Kontakt</a>
 
     </div>
 
     <!-- Kontaktinformation -->
     <div class="kontakt">
 
-        <h2>Konktat</h2>
-        <h3>Eller@mail.dk</h3>
-        <h3>30 30 30 30</h3>
+        <h1>Konktat</h1>
+        <p class="footerInfo">Kontakt@jcislagelse.dk</p>
+        <p class="footerInfo">30 43 34 20</p>
 
     </div>
 

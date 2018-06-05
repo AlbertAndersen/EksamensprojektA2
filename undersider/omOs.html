@@ -36,6 +36,7 @@
     <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
     <link rel="stylesheet" href="../css/hamburgers.css">
     <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <link href="../css/slide.css" rel="stylesheet" type="text/css">
 
     <!-- google fonts, font awesome, javascript -->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -124,7 +125,7 @@
     <div class="menu">
 
         <a href="../index.html">Forside</a>
-        <a href="../undersider/omOs.html">Om os</a>
+        <a href="../undersider/omOs.html"><div class="denneSide">Om os</div></a>
         <a href="../undersider/medlemskab.html">Medlemskab</a>
         <a href="../undersider/events.html">Events</a>
         <a href="../undersider/kontakt.html">Kontakt</a>
@@ -145,7 +146,7 @@
     <!-- Overskriften i header -->
     <h1>Om os</h1>
 
-    <br><br>
+
 
 </header>
 
@@ -178,22 +179,113 @@
 </script>
 
 
-<div class="omsosbestyrelse"> BESTYRELSE </div>
+<div class="omsosbestyrelse grid"> <h2>BESTYRELSE</h2>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+
+            <div class="president personer">
+
+                <img src="../Images/logo-2.png" alt="">
+
+                <h3>1President/formand </h3>
+
+                <p>Caroline Sørensen</p>
+                <p>Kommunikationsansvarlig</p>
+                <p> Mail: lp@jci-slagelse.dk</p>
+                <p> Tlf: 21 26 93 25</p>
+            </div>
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="president personer">
+
+                <img src="../Images/logo-2.png" alt="">
+
+                <h3>2President/formand </h3>
+
+                <p>Caroline Sørensen</p>
+                <p>Kommunikationsansvarlig</p>
+                <p> Mail: lp@jci-slagelse.dk</p>
+                <p> Tlf: 21 26 93 25</p>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="president personer">
+
+                <img src="../Images/logo-2.png" alt="">
+
+                <h3>3President/formand </h3>
+
+                <p>Caroline Sørensen</p>
+                <p>Kommunikationsansvarlig</p>
+                <p> Mail: lp@jci-slagelse.dk</p>
+                <p> Tlf: 21 26 93 25</p>
+            </div>
+        </div>
+
+        <!-- Next and previous buttons -->
+
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)"> <i class="fas fa-chevron-left"></i></a>
+    <a class="next" onclick="plusSlides(1)"><i class="fas fa-chevron-right"></i></a>
+    <br>
+
+    <!-- The dots/circles -->
+
+
+
+</div>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+
 
 <div class="omospartner">PARTNERE
-  <div class="billedomospartner"></div>
-   </div>
+  <div class="billedomospartner">
+
+  </div>
+</div>
 
 <div class="omosboks">
-    <div class="omosevent">EVENTS
-    </div>
-    <div class="omosmedlemskab">MEDLEMSKAB</div>
+    <a href="events.html" class="ghost-button">Events</a>
+    <a href="medlemskab.html" class="ghost-button">Medlemskab</a>
+
 </div>
 
 <div class="omosbilleder">
-    <div class="boks1">TEST1</div>
-    <div class="boks1">TEST1</div>
-    <div class="boks1">TEST1</div>
+    <div class="boks1"><img src="../images/snak.gif" alt=""></div>
+    <div class="boks1"><img src="../images/mikrofon.gif" alt=""></div>
+    <div class="boks1"><img src="../images/grangia.gif" alt=""></div>
 </div>
 
 
@@ -203,7 +295,7 @@
 <!--- CTA -->
 <section class="cta ">
     <h2>HØR MERE OM HVORDAN DU KAN BLIVE MEDLEM</h2>
-    <div class="ghost-button">Klik her</div>
+    <a href="medlemskab.html" class="ghost-button">Medlemskab</a>
 </section>
 
 
@@ -227,20 +319,20 @@
     <!-- undersider -->
     <div class="sider">
 
-        <h3>Forside</h3>
-        <h3>Om os</h3>
-        <h3>Events</h3>
-        <h3>Medlemskab</h3>
-        <h3>Kontakt</h3>
+        <a href="../index.html">Forside</a>
+        <a href="#top" class="smoothScroll" onclick="closeNav()"><div class="denneSide">Om os</div></a>
+        <a href="medlemskab.html">Medlemskab</a>
+        <a href="events.html">Events</a>
+        <a href="kontakt.html">Kontakt</a>
 
     </div>
 
     <!-- Kontaktinformation -->
     <div class="kontakt">
 
-        <h2>Konktat</h2>
-        <h3>Eller@mail.dk</h3>
-        <h3>30 30 30 30</h3>
+        <h1>Konktat</h1>
+        <p class="footerInfo">Kontakt@jcislagelse.dk</p>
+        <p class="footerInfo">30 43 34 20</p>
 
     </div>
 

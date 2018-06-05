@@ -45,10 +45,12 @@ body {
   font-weight: normal;
   background-color: #212121; }
 
-h1, h2, h4, h5, h6 {
+h1, h2, h3 {
   margin: 0;
-  padding: 30px;
-  letter-spacing: 5px;
+  padding: 30px 0;
+  letter-spacing: 5px; }
+
+h1, h2 {
   text-transform: uppercase; }
 
 h1 {
@@ -57,7 +59,7 @@ h1 {
 
 p {
   margin: 0;
-  padding: 0px; }
+  padding: 0; }
 
 img {
   display: block;
@@ -86,6 +88,10 @@ img {
   background: #ffffff;
   cursor: pointer; }
 
+.ghost-button a {
+  text-decoration: none;
+  color: white; }
+
 .logo {
   background-image: url("../Images/logo-2.png");
   background-size: contain;
@@ -99,6 +105,13 @@ img {
 .Mobil {
   display: block; }
 
+.denneSide {
+  color: #f37121;
+  display: inline;
+  font-weight: bold;
+  outline: #f6f7fd solid;
+  padding: 3 10; }
+
 /*========================================================================
  ==============================Header, footer & Landing==========
 =========================================================================*/
@@ -110,15 +123,20 @@ img {
 .logo.nav {
   grid-column: 2/3; }
 
+.logo a {
+  height: 100px;
+  width: 100px; }
+
 .menu {
   display: none;
   grid-column: 5/13;
-  margin: auto 0 auto auto; }
+  margin: auto 0 auto auto;
+  padding-right: 40; }
 
 .menu a {
   align-content: center;
   text-decoration: none;
-  padding: 0 40px;
+  padding: 0 20px;
   font-size: 20px;
   color: #f6f7fd; }
 
@@ -127,7 +145,8 @@ header {
   min-height: 500px;
   max-height: 70vh;
   align-items: center;
-  background-position: center center; }
+  background-position: center center;
+  background-size: cover; }
 
 header h1 {
   grid-column: 1/13; }
@@ -135,7 +154,7 @@ header h1 {
 /*================FOOTER===============*/
 footer {
   justify-items: center;
-  background-color: #636363;
+  background-color: #292929;
   padding: 50px 0px; }
 
 .logo.foot {
@@ -154,15 +173,29 @@ footer {
   color: #f37121; }
 
 .sider {
-  padding: 30px 0px;
+  padding: 30px;
   grid-row: 2/3;
-  grid-column: 1/13;
-  text-align: center; }
+  grid-column: 1/13; }
+
+.sider a {
+  text-decoration: none;
+  color: #f6f7fd;
+  display: block;
+  text-align: center;
+  padding: 10px; }
+
+a:hover {
+  color: black; }
 
 .kontakt {
   grid-row: 3/4;
   grid-column: 1/13;
   text-align: center; }
+
+.footerInfo {
+  padding: 20px;
+  letter-spacing: 2px;
+  font-size: 20; }
 
 /*========================================================================
  ==============================forside====================================
@@ -177,15 +210,15 @@ header.forside {
   min-height: 500px; }
 
 .blob {
-  grid-column: 5/10;
-  padding: 30px 0px;
+  grid-column: 2/12;
+  padding: 30px 0;
   display: flex;
   flex-direction: column; }
 
 .blob * {
   margin: auto;
   text-align: center;
-  padding: 10px; }
+  padding: 20px; }
 
 .blob1 {
   grid-row: 1/2; }
@@ -196,13 +229,23 @@ header.forside {
 .blob3 {
   grid-row: 3/4; }
 
+.stortBogstav {
+  font-size: 150px;
+  color: #f37121;
+  font-weight: bold; }
+
 /*================står for===============*/
 .staFor {
   background-color: #636363; }
 
+.lidtPadding {
+  padding-bottom: 30px; }
+
 .staFor * {
-  padding: 20px;
   grid-column: 2/11; }
+
+.gallery {
+  background-image: url("../images/headerTest.png"); }
 
 /*================CTA===============*/
 .cta {
@@ -234,7 +277,7 @@ header.omOs {
   grid-column: 2/12; }
 
 .omosslide {
-  padding: 0px 20px 20px 20px;
+  padding: 0 20px 20px 20px;
   margin: 0;
   background-color: #b7b7b7;
   font-size: 16px;
@@ -244,8 +287,11 @@ header.omOs {
 
 .hvemoghvad {
   grid-row: 1/2;
-  grid-column: 2/11;
+  grid-column: 2/12;
   font-size: 24px; }
+
+.overskriftomos {
+  padding: 30px; }
 
 #osom {
   border: thin solid #f37121;
@@ -257,7 +303,7 @@ header.omOs {
   margin-right: auto;
   padding: 17px;
   font-size: 16px;
-  grid-column: 2/11;
+  grid-column: 2/12;
   grid-row: 4/5;
   margin-bottom: 10px; }
 
@@ -269,24 +315,31 @@ header.omOs {
 
 .omsosbestyrelse {
   background-color: #636363;
-  height: 400px;
   color: white;
   font-size: x-large;
   text-align: center;
-  padding-top: 20px; }
+  padding-top: 20px;
+  height: 500px; }
 
 .omospartner {
-  height: 100px;
   background-color: #b7b7b7;
   color: #f37121;
   font-size: x-large;
   text-align: center;
-  padding-top: 10px; }
+  background-image: url("../images/bestyrelse.png");
+  background-position: center center;
+  height: 300px; }
 
 .omosboks {
   background-color: #636363;
-  height: 150px;
-  padding-top: 35px; }
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column; }
+
+.omosboks * {
+  max-width: 40px;
+  margin: 20 auto; }
 
 .omosevent {
   border: thin solid #f37121;
@@ -310,32 +363,49 @@ header.omOs {
   padding: 17px; }
 
 .omosbilleder {
-  display: grid;
-  grid-template-rows: 3, 1fr;
-  grid-template-columns: 1, 1fr;
-  grid-gap: 40px;
-  justify-content: space-around; }
+  background-color: #b7b7b7;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column; }
+
+.boks1 {
+  padding: 30;
+  margin: auto; }
 
 /*========================================================================
  ==============================Medlemsskab====================================
 =========================================================================*/
 /*================HEADER===============*/
 header.medlemskab {
-  background-image: url("../Images/2.png"); }
+  background-image: url("../Images/IMG_4340.png");
+  background-size: cover; }
 
 /*================Hvad er medlemskab===============*/
+.medlemskabflex, .tilmeldflex {
+  background-color: #b7b7b7; }
+
+.medlemskabflex {
+  grid-column: 1/13;
+  grid-row: 1/2;
+  padding: 0 20 20 20; }
+
+.tilmeldflex {
+  grid-column: 1/13;
+  grid-row: 2/3;
+  padding: 0 20 20 20; }
+
 .medlemskabtxt, .tilmeld, .priser {
   background-color: #b7b7b7; }
 
 .nummer {
   background-color: #636363; }
 
-.medlemskabtxt *, .tilmeld *, .priser *, .nummer * {
+.tilmeld *, .priser *, .nummer * {
   grid-column: 2/11;
   padding: 20px; }
 
-.medlemsbillede, .tilmeldbillede {
-  display: none; }
+.priser h2 {
+  margin: auto; }
 
 .memberinput {
   color: #ffffff;
@@ -346,6 +416,11 @@ header.medlemskab {
   margin: 10px;
   width: 120px; }
 
+.sendflex {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; }
+
 /*================Hvordan tilmelder man sig===============*/
 /*================priser===============*/
 /*================Skriv nummer eller mail===============*/
@@ -353,8 +428,8 @@ header.medlemskab {
  ==============================Events====================================
 =========================================================================*/
 /*================HEADER===============*/
-header.eventsh {
-  background-image: url("../Images/headerTest.png"); }
+header.events1 {
+  background-image: url("../Images/omosheader.png"); }
 
 /*================Kalender===============*/
 .kalender {
@@ -362,38 +437,20 @@ header.eventsh {
   display: flex;
   flex-direction: column; }
 
-.kalenderOverskrift {
-  font-size: 20px; }
-
-.tekstkalender {
-  font-size: 10px;
-  padding: 0 50px 50px 50px; }
-
 /*=================Info=====================*/
 .info {
   background-color: #b7b7b7; }
-
-.infooverskrift {
-  font-size: 20px; }
-
-.tekstinfo {
-  font-size: 10px;
-  padding: 0 50px 50px 50px; }
 
 /*================events===============*/
 .events {
   background-color: #636363; }
 
-.eventoverskrift {
-  font-size: 20px; }
+.tekstkalender, .tekstinfo, .tekstevent2 {
+  padding: 0 30 30 30; }
 
-.tekstevent {
-  text-align: left;
-  font-size: 10px;
-  padding: 0 50px 0 50px; }
-
-li {
-  font-size: 10px; }
+.og2 {
+  background-image: url("../images/headerTest.png");
+  width: 500; }
 
 /*================CTA===============*/
 /*========================================================================
@@ -464,6 +521,14 @@ header.kontakt {
   margin: auto;
   padding: 30px 0; }
 
+.form {
+  display: flex;
+  justify-content: center; }
+
+form .ghost-button {
+  margin: auto;
+  padding: 2; }
+
 #conin {
   height: 30px;
   width: 400px;
@@ -518,9 +583,6 @@ header.kontakt {
   .sider {
     display: flex; }
 
-  h3 {
-    padding: 0 20px; }
-
   /*========================================================================
    ==============================Forside============================================
    =========================================================================*/
@@ -538,20 +600,46 @@ header.kontakt {
     grid-column: 9/13; }
 
   /*================stafor===============*/
-  .staForTekst {
-    grid-column: 2/8;
-    grid-row: 1/2; }
-
-  .staFor .gallery {
-    grid-column: 9/12;
-    grid-row: 1/2; }
-
   /*========================================================================
  ==============================Om os====================================
 =========================================================================*/
+  .omosbilleder {
+    flex-direction: row;
+    justify-content: center; }
+
   /*========================================================================
  ==============================Medlemsskab====================================
 =========================================================================*/
+  .medlemskabflex {
+    grid-column: 1/7;
+    grid-row: 1/2; }
+
+  .medlembillede {
+    grid-column: 7/13;
+    grid-row: 1/2;
+    background-image: url("../images/headerTest.png");
+    background-position: center center; }
+
+  .tilmeldbillede {
+    grid-column: 1/7;
+    grid-row: 2/3;
+    background-image: url("../images/headerTest.png");
+    background-position: center center; }
+
+  .tilmeldflex {
+    grid-column: 7/13;
+    grid-row: 2/3; }
+
+  .tilmeld, .medlemskabtxt {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
+
+  .sendflex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
+
   /*========================================================================
  ==============================Events====================================
 =========================================================================*/
@@ -561,6 +649,9 @@ header.kontakt {
   .events {
     display: flex;
     flex-direction: row-reverse; }
+
+  .kalenderbillede img {
+    max-height: 1000px; }
 
   /*========================================================================
  ==============================Kontakt====================================
@@ -588,6 +679,14 @@ header.kontakt {
   /*========================================================================
    ==============================Forside============================================
    =========================================================================*/
+  .staForTekst {
+    grid-column: 2/8;
+    grid-row: 1/2; }
+
+  .staFor .gallery {
+    grid-column: 9/12;
+    grid-row: 1/2; }
+
   /*========================================================================
  ==============================Om os====================================
 =========================================================================*/
@@ -597,30 +696,24 @@ header.kontakt {
   /*========================================================================
  ==============================Events====================================
 =========================================================================*/
-  .Mobil {
-    display: none; }
-
-  .Web {
-    display: block; }
-
-  .kalender {
-    justify-content: space-around;
-    display: flex; }
-
-  .kalenderbillede {
-    margin-left: 100px;
-    margin-top: 130px; } }
   /*========================================================================
  ==============================Kontakt====================================
 =========================================================================*/
-/*
+  /*========================================================================
+ ==============================Kontakt====================================
+=========================================================================*/ }
+    /*
 
-/'.'.'.\
-&%$&%$&r
-(#####u)
-\,,,,,,/
 
-*/
+
+
+
+    /'.'.'.\
+    &%$&%$&r
+    (#####u)
+    \,,,,,,/
+
+    */
 /*================BURGER MENU===============*/
 .hamburger {
   z-index: 2;
