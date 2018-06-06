@@ -394,10 +394,10 @@ header.medlemskab {
   grid-row: 2/3;
   padding: 0 20 20 20; }
 
-.medlemskabtxt, .tilmeld, .priser {
+.medlemskabtxt, .tilmeld, .nummer {
   background-color: #b7b7b7; }
 
-.nummer {
+.priser {
   background-color: #636363; }
 
 .tilmeld *, .priser *, .nummer * {
