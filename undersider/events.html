@@ -36,6 +36,7 @@
     <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
     <link rel="stylesheet" href="../css/hamburgers.css">
     <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <link href="../css/slide.css" rel="stylesheet" type="text/css">
 
     <!-- google fonts, font awesome, javascript -->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -65,11 +66,11 @@
     <nav class="overlay-content">
 
         <!-- onclick lukker overlay. #top går til a tag med navn top. class smoothscroll aktivere smoothscroll -->
-        <a href="#top" class="smoothScroll" onclick="closeNav()">Forside</a>
-        <a href="undersider/omOs.html">Om os</a>
-        <a href="undersider/">Medlemskab</a>
-        <a href="undersider/">Events</a>
-        <a href="undersider/">Kontkat</a>
+        <a href="../index.html">Forside</a>
+        <a href="omOs.html">Om os</a>
+        <a href="medlemskab.html">Medlemskab</a>
+        <a href="events.html">Events</a>
+        <a href="kontakt.html">Kontakt</a>
 
     </nav>
 </div>
@@ -173,7 +174,7 @@
 
 <section class="info">
     <h1 class="infooverskrift">
-        Har du en drøm at om være projektleder?
+        Har du en drøm om at være projektleder?
     </h1>
 
     <p class="tekstinfo">
@@ -189,7 +190,98 @@
 
 
 <!---tidligere events ------->
+<div class="eventslider grid">
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
 
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade grid">
+
+            <div class="eventtekst">
+
+                <h1 class="eventoverskrift">
+                    JCI Forårskongres 2018
+                </h1>
+                <div class="tekstevent2">
+                    <p class="tekstevent">
+                        JCI har i år fået bragt  store talere, kompetente erhvervsledere, workshops , træninger og virksomhedsbesøg til ørestad gymnasium D. 6 april - 8 april.
+                    </p>
+                    <br>
+                    <p class="tekstevent">
+                        Foredragsholderne erhvervskonference FutureDay kom forbi vores forårskongres
+                        ved hjælp af vores sponsorer, såsom Tuborg fondet, Bottomline og  ad-nugning for at tale om projektledelse og lederegenskaber
+                    </p>
+                    <br>
+                    <p class="tekstevent">
+                        Foredragsholderne bestod af:
+                        <ul>
+                            <li> <p> Ane Cortzen som vært</p></li>
+                    <li> <p> Marianne Steensen, CEO hos Microsoft Danmark</p></li>
+                    <li> <p> Allan Polack, CEO i PFA Pension</p></li>
+                    <li> <p> Harry McCann, 19 årige fremadskuende entreprenør, som var en af TOYP vinderne til verdenskongressen i Amsterdam</p></li>
+                    </ul>
+                    </p>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+        <div class="mySlides fade grid">
+
+            <div class="eventtekst">
+
+                <h1 class="eventoverskrift">
+                    Heste hygge med JCI
+                </h1>
+                <div class="tekstevent2">
+                    <p class="tekstevent">
+                        JCI har i år fået bragt  store talere, kompetente erhvervsledere, workshops , træninger og virksomhedsbesøg til ørestad gymnasium D. 6 april - 8 april.
+                    </p>
+                    <br>
+                    <p class="tekstevent">
+                        Foredragsholderne erhvervskonference FutureDay kom forbi vores forårskongres
+                        ved hjælp af vores sponsorer, såsom Tuborg fondet, Bottomline og  ad-nugning for at tale om projektledelse og lederegenskaber
+                    </p>
+                    <br>
+                    <p class="tekstevent">
+                        Foredragsholderne bestod af:
+                        <ul>
+                            <li> <p> Ane Cortzen som vært</p></li>
+                    <li> <p> Marianne Steensen, CEO hos Microsoft Danmark</p></li>
+                    <li> <p> Allan Polack, CEO i PFA Pension</p></li>
+                    <li> <p> Harry McCann, 19 årige fremadskuende entreprenør, som var en af TOYP vinderne til verdenskongressen i Amsterdam</p></li>
+                    </ul>
+                    </p>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+        <!-- Next and previous buttons -->
+
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)"> <i class="fas fa-chevron-left"></i></a>
+    <a class="next" onclick="plusSlides(1)"><i class="fas fa-chevron-right"></i></a>
+    <br>
+
+    <!-- The dots/circles -->
+
+
+
+</div>
+
+<!---
 <section class="events">
 
     <div class="eventtekst">
@@ -225,8 +317,41 @@
 
     </div>
 
+    <a class="prev" onclick="plusSlides(-1)"> <i class="fas fa-chevron-left"></i></a>
+    <a class="next" onclick="plusSlides(1)"><i class="fas fa-chevron-right"></i></a>
+    <br>
+
 
 </section>
+
+--->
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
 
 
 

@@ -633,9 +633,15 @@ header.events1 { //Header billede på events
   padding: 0 30 30 30;
 }
 
-.og2 {
-  background-image: url("../images/headerTest.png");
-  width: 500;
+
+
+.eventSl {
+  grid-column: 1/13;
+
+}
+
+.eventslider {
+  background-color: $color-mgraa;
 }
 
 
@@ -653,7 +659,7 @@ header.events1 { //Header billede på events
 /*================HEADER===============*/
 
 header.kontakt { //Header billede på kontakt
-  background-image: url("../Images/4.png");
+  background-image: url("../Images/headerTest.png");
 
 }
 
@@ -923,16 +929,18 @@ form .ghost-button {
     max-height: 1000px;
   }
 
+
+
   /*========================================================================
  ==============================Kontakt====================================
 =========================================================================*/
   .flex { // laver flex på to personer så de står side om side. Padding så de ikke står klods på af hinanden
     display: flex;
-    padding: 100px;
+    padding: 100 0;
   }
 
   .personer { // padding så personer ikke står klods op af hinanden
-    padding: 0 100px;
+    padding: 0 70px;
   }
 
 

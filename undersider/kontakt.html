@@ -73,11 +73,11 @@
     <nav class="overlay-content">
 
         <!-- onclick lukker overlay. #top går til a tag med navn top. class smoothscroll aktivere smoothscroll -->
-        <a href="#top" class="smoothScroll" onclick="closeNav()">Forside</a>
-        <a href="undersider/omOs.html">Om os</a>
-        <a href="undersider/">Medlemskab</a>
-        <a href="undersider/">Events</a>
-        <a href="undersider/">Kontkat</a>
+        <a href="../index.html">Forside</a>
+        <a href="omOs.html">Om os</a>
+        <a href="medlemskab.html">Medlemskab</a>
+        <a href="events.html">Events</a>
+        <a href="kontakt.html">Kontakt</a>
 
     </nav>
 </div>
@@ -131,7 +131,7 @@
         <a href="../undersider/omOs.html">Om os</a>
         <a href="../undersider/medlemskab.html">Medlemskab</a>
         <a href="../undersider/events.html">Events</a>
-        <a href="../undersider/kontakt.html">Kontakt</a>
+        <a href="../undersider/kontakt.html"><div class="denneSide">Kontakt</div></a>
 
     </div>
 
@@ -164,12 +164,12 @@
     <h2>Kontakt oplysninger</h2>
     <div class="info">
         <div class="mail">
-            <div class="SoMe_icon2"> <i class="fab fa-facebook-square fa-3x"></i> </div>
+            <div class="SoMe_icon2"> <i class="fas fa-envelope fa-3x"></i> </div>
             <h3>Kontakt@jcislagelse.dk</h3>
         </div>
 
         <div class="telefon">
-            <div class="SoMe_icon2"> <i class="fab fa-instagram fa-3x"></i> </div>
+            <div class="SoMe_icon2"> <i class="fas fa-phone fa-3x"></i> </div>
             <h3>30 43 34 20</h3>
         </div>
     </div>
@@ -321,7 +321,7 @@
 <!--- CTA -->
 <section class="cta ">
     <h2>Blev medlem i dag</h2>
-    <div class="ghost-button mereOgMindre">medlemskab</div>
+    <a href="medlemskab.html" class="ghost-button mereOgMindre">medlemskab</a>
 </section>
 
 
@@ -344,20 +344,20 @@
     <!-- undersider -->
     <div class="sider">
 
-        <h3>Forside</h3>
-        <h3>Om os</h3>
-        <h3>Events</h3>
-        <h3>Medlemskab</h3>
-        <h3>Kontakt</h3>
+        <a href="../index.html">Forside</a>
+        <a href="omOs.html">Om os</a>
+        <a href="medlemskab.html">Medlemskab</a>
+        <a href="events.html">Events</a>
+    <a href="#top" class="smoothScroll" onclick="closeNav()"><div class="denneSide">Kontakt</div></a>
 
     </div>
 
     <!-- Kontaktinformation -->
     <div class="kontakt">
 
-        <h2>Konktat</h2>
-        <h3>Eller@mail.dk</h3>
-        <h3>30 30 30 30</h3>
+        <h1>Konktat</h1>
+        <p class="footerInfo">Kontakt@jcislagelse.dk</p>
+        <p class="footerInfo">30 43 34 20</p>
 
     </div>
 
