@@ -85,6 +85,9 @@ img {
   height: auto; // H¯jden skal tilpasse sig
 }
 
+a {
+  color: #f37121;
+}
 
 
 
@@ -98,7 +101,7 @@ $color-mgraa: #636363; //den mørke Grå farve
 $color-lgraa: #b7b7b7; //den lysegrå farve
 $color-orange: #f37121; //den orange farve
 $color-mmgraa: #292929;
-@mixin Roboto {font-family: Roboto Condensed Regular}
+
 
 
 
@@ -114,7 +117,6 @@ $color-mmgraa: #292929;
 .ghost-button {
   color: #ffffff;
   text-align: center;
-  border: 2px solid #ffffff;
   font-size: 14px;
   padding: 7px 2px;
   font-weight: normal;
@@ -122,6 +124,11 @@ $color-mmgraa: #292929;
   display: inline-block;
   text-decoration: none;
   min-width: 120px;
+  background-color: #f37121;
+}
+
+.blaa {
+  border: 2px solid white;
 }
 
 .ghost-button:hover, .ghost-button:active {
@@ -156,8 +163,8 @@ $color-mmgraa: #292929;
   color: $color-orange;
   display: inline;
   font-weight: bold;
-  outline: #f6f7fd solid ;
-  padding: 3 10;
+  border-bottom: #f6f7fd solid ;
+  padding: 3px 10px;
 
 }
 //lister
@@ -190,7 +197,7 @@ $color-mmgraa: #292929;
   display: none; //vises ikke som standart
   grid-column: 5/13;
   margin: auto 0 auto auto; //centrere A tags
-  padding-right: 40;
+  padding-right: 40px;
 
 }
 
@@ -223,7 +230,7 @@ header h1{
 footer {
   justify-items: center;
   background-color: $color-mmgraa;
-  padding: 50px 0px; //giver lidt white space i toppen og bunden af footer
+  padding: 50px 0; //giver lidt white space i toppen og bunden af footer
 }
 
 .logo.foot { //placering og størrelse på logo i footer
@@ -276,7 +283,7 @@ a:hover {
 .footerInfo {
   padding: 20px;
   letter-spacing: 2px;
-  font-size: 20;
+  font-size: 20px;
 }
 
 
@@ -383,7 +390,7 @@ header.omOs { //Header billede på om os
 .tekstomos {
   background-color: #b7b7b7;
   color: white;
-  font-size: x-large;
+
   text-align: center;
   padding-top: 20px;
 }
@@ -397,7 +404,7 @@ header.omOs { //Header billede på om os
   padding: 0 20px 20px 20px;
   margin: 0;
   background-color: #b7b7b7;
-  font-size: 16px;
+
   grid-column: 2/12;
   text-align: left;
   grid-row: 3/4;
@@ -407,7 +414,7 @@ header.omOs { //Header billede på om os
 .hvemoghvad{
   grid-row: 1/2;
   grid-column: 2/12;
-  font-size: 24px;
+
 }
 
 .overskriftomos {
@@ -423,7 +430,7 @@ header.omOs { //Header billede på om os
   margin-left: auto;
   margin-right: auto;
   padding: 17px;
-  font-size: 16px;
+
   grid-column: 2/12;
   grid-row: 4/5;
   margin-bottom: 10px;
@@ -432,7 +439,7 @@ header.omOs { //Header billede på om os
 
 .undertekstomsos {
   text-align: left;
-  font-size: 16px;
+
   padding: 20px;
   line-height: 20px;
 
@@ -441,7 +448,7 @@ header.omOs { //Header billede på om os
 .omsosbestyrelse {
   background-color: #636363;
   color: white;
-  font-size: x-large;
+
   text-align: center;
   padding-top: 20px;
   height: 500px;
@@ -451,7 +458,7 @@ header.omOs { //Header billede på om os
 
   background-color: #b7b7b7;
   color: $color-orange;
-  font-size: x-large;
+
   text-align: center;
   background-image: url("../images/bestyrelse.png");
   background-position: center center;
@@ -468,7 +475,7 @@ header.omOs { //Header billede på om os
 
 .omosboks * {
   max-width: 40px;
-  margin: 20 auto;
+  margin: 20px auto;
 }
 
 .omosevent {
@@ -495,14 +502,14 @@ header.omOs { //Header billede på om os
 }
 
 .omosbilleder {
-  background-color: $color-lgraa;
+  background-color: $color-mgraa;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
 
 }
 .boks1 {
-  padding: 30;
+  padding: 30px;
   margin: auto;
 }
 
@@ -527,33 +534,36 @@ header.medlemskab { //Header billede på medlemskab
 }
 
 /*================Hvad er medlemskab===============*/
+.medlem1 {
+  background-color: $color-lgraa;
+}
 
 .medlemskabflex, .tilmeldflex {
   background-color: $color-lgraa;
 }
 
 .medlemskabflex {
-  grid-column: 1/13;
+  grid-column: 2/12;
   grid-row: 1/2;
-  padding: 0 20 20 20;
+  padding: 0 20px 20px 20px;
 }
 
 .tilmeldflex {
-  grid-column: 1/13;
+  grid-column: 2/12;
   grid-row: 2/3;
-  padding: 0 20 20 20;
+  padding: 0 20px 20px 20px;
 }
 
-.medlemskabtxt, .tilmeld, .priser{
-  background-color: $color-lgraa;
-}
 
-.nummer{
+
+.priser {
   background-color: $color-mgraa;
 }
 
 
-.tilmeld *, .priser *, .nummer *{
+
+
+.tilmeld *, .priser * {
   grid-column: 2/11;
   padding: 20px;
 }
@@ -565,9 +575,9 @@ header.medlemskab { //Header billede på medlemskab
 
 .memberinput{
   color: #ffffff;
-  background-color: $color-lgraa;
+
   border: 2px solid #ffffff;
-  font-size: 14px;
+
   padding: 7px 2px;
   margin: 10px;
   width: 120px;
@@ -629,8 +639,9 @@ header.events1 { //Header billede på events
 }
 
 
-.tekstkalender, .tekstinfo, .tekstevent2 {
-  padding: 0 30 30 30;
+.tekstkalender, .tekstinfo, .kalenderOverskrift, .infooverskrift {
+  padding: 20 60px;
+
 }
 
 
@@ -670,7 +681,7 @@ header.kontakt { //Header billede på kontakt
 }
 
 .KontaktOplysninger h2 { //placering af overskrift
-  grid-column: 3/11 ;
+  grid-column: 2/12 ;
   grid-row: 1/2;
   text-align: center;
 }
@@ -678,18 +689,19 @@ header.kontakt { //Header billede på kontakt
 .SoMe_icon2 { // farve på ikoner og padding så de ikke står klods op af tekst
   color: $color-orange;
   padding: 0 20px 0 0;
+  margin: auto 0;
 
 }
 
 
 .info {//placering
-  grid-column: 3/11 ;
+  grid-column: 2/12 ;
   grid-row: 2/3;
   margin: auto;
 }
 
 .mail , .telefon { //placering. Flex for at ikon og mail står ved siden af hinanden
-  grid-column: 3/11 ;
+  grid-column: 2/12 ;
   display: flex;
 
 }
@@ -698,7 +710,7 @@ header.kontakt { //Header billede på kontakt
 /*================Bestyrelsen===============*/
 
 #bestyrelsen {
-  grid-column: 3/11;
+  grid-column: 2/12;
   margin: 30px 0;
 }
 
@@ -711,6 +723,7 @@ header.kontakt { //Header billede på kontakt
  margin: 30px auto;
   display: flex;
   grid-column: 1/13;
+
 }
 
 .more {
@@ -729,19 +742,22 @@ header.kontakt { //Header billede på kontakt
 .nummer {
   background-color: $color-mgraa;
 }
+.nummer2 {
+  background-color: $color-lgraa;
+}
 
 .nummer h2 {
-  grid-column: 3/11;
+  grid-column: 2/12;
   padding: 30px 0;
   text-align: center;
 }
 
 .nummer p {
-  grid-column: 3/11;
+  grid-column: 2/12;
 }
 
 .newletter {
-  grid-column: 3/11;
+  grid-column: 2/12;
   grid-row: 3/4;
   margin: auto;
   padding: 30px 0;
@@ -754,7 +770,7 @@ header.kontakt { //Header billede på kontakt
 
 form .ghost-button {
   margin: auto;
-  padding: 2;
+  padding: 2px;
 
 }
 
@@ -859,6 +875,7 @@ form .ghost-button {
 =========================================================================*/
   .omosbilleder {
 
+
     flex-direction: row;
     justify-content: center;
   }
@@ -936,7 +953,7 @@ form .ghost-button {
 =========================================================================*/
   .flex { // laver flex på to personer så de står side om side. Padding så de ikke står klods på af hinanden
     display: flex;
-    padding: 100 0;
+    padding: 100px 0;
   }
 
   .personer { // padding så personer ikke står klods op af hinanden
