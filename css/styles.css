@@ -591,13 +591,13 @@ form .ghost-button {
   .medlembillede {
     grid-column: 7/13;
     grid-row: 1/2;
-    background-image: url("../images/medlemskab.png");
+    background-image: url("../Images/medlemskab.png");
     background-position: center center; }
 
   .tilmeldbillede {
     grid-column: 1/7;
     grid-row: 2/3;
-    background-image: url("../images/medlemskab2.png");
+    background-image: url("../Images/medlemskab2.png");
     background-position: center center; }
 
   .tilmeldflex {
