@@ -1,31 +1,4 @@
-/*
-                                               .--.
-                                               `.  \
-                                                 \  \
-                                                  .  \
-                                                  :   .
-                                                  |    .
-                                                  |    :
-                                                  |    |
-  ..._  ___                                       |    |
- `."".`''''""--..___                              |    |
- ,-\  \             ""-...__         _____________/    |
- / ` " '                    `""""""""                  .
- \                                                      L
- (>                                                      \
-/                                                         \
-\_    ___..---.                                            L
-  `--'         '.                                           \
-                 .                                           \_
-                _/`.                                           `.._
-             .'     -.                                             `.
-            /     __.-Y     /''''''-...___,...--------.._            |
-           /   _."    |    /                ' .      \   '---..._    |
-          /   /      /    /                _,. '    ,/           |   |
-          \_,'     _.'   /              /''     _,-'            _|   |
-                  '     /               `-----''               /     |
-                  `...-'                                       `...-'
- */
+
 //kode opdeling kommentar
 
 /*========================================================================
@@ -294,7 +267,7 @@ a:hover {
 /*================HEADER===============*/
 
 header.forside { //Header billede på forsiden
-  background-image: url("../Images/headerTest.png");
+  background-image: url("../Images/forsideheader.png");
 
 }
 
@@ -336,6 +309,8 @@ header.forside { //Header billede på forsiden
   color: $color-orange;
   font-weight: bold;
 }
+
+
 /*================står for===============*/
 .staFor {
   background-color: $color-mgraa;
@@ -353,9 +328,6 @@ header.forside { //Header billede på forsiden
 
 }
 
-.gallery {
-  background-image: url("../images/headerTest.png");
-}
 
 /*================CTA===============*/
 
@@ -464,6 +436,7 @@ header.omOs { //Header billede på om os
   height: 300px;
 }
 
+
 .omosboks {
   background-color: #636363;
   padding-top: 10px;
@@ -513,13 +486,6 @@ header.omOs { //Header billede på om os
 }
 
 
-
-
-
-
-
-
-
 /*========================================================================
  ==============================Medlemsskab====================================
 =========================================================================*/
@@ -528,7 +494,7 @@ header.omOs { //Header billede på om os
 /*================HEADER===============*/
 
 header.medlemskab { //Header billede på medlemskab
-  background-image: url("../Images/IMG_4340.png");
+  background-image: url("../Images/medlemskabheader.png");
   background-size: cover;
 }
 
@@ -589,12 +555,6 @@ header.medlemskab { //Header billede på medlemskab
 }
 
 
-/*================Hvordan tilmelder man sig===============*/
-
-/*================priser===============*/
-
-
-/*================Skriv nummer eller mail===============*/
 
 /*========================================================================
  ==============================Events====================================
@@ -606,7 +566,7 @@ header.medlemskab { //Header billede på medlemskab
 
 
 header.events1 { //Header billede på events
-  background-image: url("../Images/omosheader.png");
+  background-image: url("../Images/eventsheader.png");
 }
 
 
@@ -654,6 +614,9 @@ header.events1 { //Header billede på events
   background-color: $color-mgraa;
 }
 
+.kalendertekst, .info {
+  padding: 0 40px 40px 40px;
+}
 
 
 
@@ -669,7 +632,7 @@ header.events1 { //Header billede på events
 /*================HEADER===============*/
 
 header.kontakt { //Header billede på kontakt
-  background-image: url("../Images/headerTest.png");
+  background-image: url("../Images/kontaktosheader.png");
 
 }
 
@@ -845,8 +808,6 @@ form .ghost-button {
 
   }
 
-
-
   /*========================================================================
    ==============================Forside============================================
    =========================================================================*/
@@ -898,14 +859,14 @@ form .ghost-button {
   .medlembillede {
     grid-column: 7/13;
     grid-row: 1/2;
-    background-image: url("../images/headerTest.png");
+    background-image: url("../images/medlemskab.png");
     background-position: center center;
   }
 
   .tilmeldbillede {
     grid-column: 1/7;
     grid-row: 2/3;
-    background-image: url("../images/headerTest.png");
+    background-image: url("../images/medlemskab2.png");
     background-position: center center;
   }
 
@@ -949,10 +910,6 @@ form .ghost-button {
   }
   .kalenderbillede img {
     max-height: 1000px;
-  }
-
-  .kalendertekst, .tekstinfo {
-    padding: 0 40px 40px 40px;
   }
 
 
@@ -1010,38 +967,8 @@ form .ghost-button {
     grid-row: 1/2;
 
   }
-  /*========================================================================
- ==============================Om os====================================
-=========================================================================*/
-
-  /*========================================================================
- ==============================Medlemsskab====================================
-=========================================================================*/
-
-  /*========================================================================
- ==============================Events====================================
-=========================================================================*/
-
-  /*========================================================================
- ==============================Kontakt====================================
-=========================================================================*/
-
-  /*========================================================================
- ==============================Kontakt====================================
-=========================================================================*/
 }
-    /*
 
-
-
-
-
-    /'.'.'.\
-    &%$&%$&r
-    (#####u)
-    \,,,,,,/
-
-    */
     /*================BURGER MENU===============*/
     // den ligger i bunden fordi den fylder meget, og ikke skal ændres på :)
   .hamburger {
