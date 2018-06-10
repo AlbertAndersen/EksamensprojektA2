@@ -685,6 +685,7 @@ header.kontakt { //Header billede på kontakt
 
 .mereOgMindre {
  margin: 30px auto;
+  border: 2px solid white; 
   display: flex;
   grid-column: 1/13;
 
@@ -744,7 +745,8 @@ form .ghost-button {
 
 #conin{ // style på input
   height: 30px;
-  width: 400px;
+  width: 80vw;
+  max-width: 400px;
   color: #ffffff;
   border: 2px solid #ffffff;
   background-color: transparent;
@@ -893,6 +895,9 @@ form .ghost-button {
     justify-content: flex-start;
   }
 
+  #conin{
+    width: 400px;
+  }
 
 
   /*========================================================================

@@ -461,6 +461,7 @@ header.kontakt {
 
 .mereOgMindre {
   margin: 30px auto;
+  border: 2px solid white;
   display: flex;
   grid-column: 1/13; }
 
@@ -505,7 +506,8 @@ form .ghost-button {
 
 #conin {
   height: 30px;
-  width: 400px;
+  width: 80vw;
+  max-width: 400px;
   color: #ffffff;
   border: 2px solid #ffffff;
   background-color: transparent;
@@ -613,6 +615,9 @@ form .ghost-button {
     display: flex;
     flex-direction: column;
     justify-content: flex-start; }
+
+  #conin {
+    width: 400px; }
 
   /*========================================================================
  ==============================Events====================================
