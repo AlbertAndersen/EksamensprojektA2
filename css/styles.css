@@ -461,13 +461,16 @@ header.kontakt {
 
 .mereOgMindre {
   margin: 30px auto;
-  border: 2px solid white;
   display: flex;
   grid-column: 1/13; }
 
 .more {
   margin: auto;
   grid-column: 1/13; }
+
+.readmoreee {
+  border: 2px solid white;
+  text-align: center; }
 
 .personer {
   margin: auto; }
