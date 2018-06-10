@@ -251,7 +251,6 @@ footer {
 .SoMe_icon { //farve og mellemrum på some ikoner
   padding: 0 20px;
   color: $color-orange;
-
 }
 
 .sider { //placering af undersider i footer
@@ -678,13 +677,15 @@ header.kontakt { //Header billede på kontakt
 
 .KontaktOplysninger { //farve på baggrund
   background-color: $color-lgraa;
+
+  h2 { //placering af overskrift
+    grid-column: 2/12 ;
+    grid-row: 1/2;
+    text-align: center;
+  }
 }
 
-.KontaktOplysninger h2 { //placering af overskrift
-  grid-column: 2/12 ;
-  grid-row: 1/2;
-  text-align: center;
-}
+
 
 .SoMe_icon2 { // farve på ikoner og padding så de ikke står klods op af tekst
   color: $color-orange;
@@ -937,7 +938,7 @@ form .ghost-button {
  ==============================Events====================================
 =========================================================================*/
   .kalender {
-
+    display: flex;
     flex-direction: row;
   }
 
@@ -949,6 +950,13 @@ form .ghost-button {
   .kalenderbillede img {
     max-height: 1000px;
   }
+
+  .kalendertekst, .tekstinfo {
+    padding: 0 40px 40px 40px;
+  }
+
+
+
 
 
 
