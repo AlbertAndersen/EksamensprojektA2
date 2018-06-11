@@ -8,6 +8,6 @@
 #
 User-agent: *
 Disallow: /README.md
-Disallow: /fejlSider
+
 
 

@@ -476,7 +476,7 @@ header.omOs { //Header billede på om os
 .omosbilleder {
   background-color: $color-mgraa;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: column;
 
 }
@@ -599,7 +599,7 @@ header.events1 { //Header billede på events
 
 
 .tekstkalender, .tekstinfo, .kalenderOverskrift, .infooverskrift {
-  padding: 20 60px;
+  padding: 20px 60px;
 
 }
 

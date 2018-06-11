@@ -333,7 +333,7 @@ header.omOs {
 .omosbilleder {
   background-color: #636363;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: column; }
 
 .boks1 {
@@ -409,7 +409,7 @@ header.events1 {
   background-color: #636363; }
 
 .tekstkalender, .tekstinfo, .kalenderOverskrift, .infooverskrift {
-  padding: 20 60px; }
+  padding: 20px 60px; }
 
 .eventSl {
   grid-column: 1/13; }
