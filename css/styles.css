@@ -462,7 +462,8 @@ header.kontakt {
 .mereOgMindre {
   margin: 30px auto;
   display: flex;
-  grid-column: 1/13; }
+  grid-column: 1/13;
+  text-align: center; }
 
 .more {
   margin: auto;
